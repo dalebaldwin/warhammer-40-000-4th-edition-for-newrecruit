@@ -1983,9 +1983,6 @@ Drop pods may be used in Standard Missions without your opponent&apos;s agreemen
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eb8c-348c-3309-aa87-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb8c-348c-3309-aa87-max" includeChildSelections="false"/>
           </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Armoury" hidden="false" id="e621-a1a4-ce69-384e" type="selectionEntryGroup" targetId="armoury1"/>
-          </entryLinks>
           <costs>
             <cost name="Points" typeId="4deb-313d-6685-f48b" value="40"/>
           </costs>
