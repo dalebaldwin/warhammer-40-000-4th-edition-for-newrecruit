@@ -1381,8 +1381,8 @@ A character who is leading or attached to a squad does not stop being an Indepen
       <selectionEntryGroups>
         <selectionEntryGroup name="Weapons" id="b7ce-82c8-5ccd-fd10" hidden="false" flatten="true" defaultSelectionEntryId="af1f-5ed4-99bf-1a55">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b755-8f1c-82da-409f-max-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b755-8f1c-82da-409f-max-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b755-8f1c-82da-409f-max-min" includeChildSelections="false" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b755-8f1c-82da-409f-max-max" includeChildSelections="false" automatic="true"/>
           </constraints>
           <selectionEntryGroups>
             <selectionEntryGroup name="Standard Weapons" id="61d8-f530-4630-bef7" hidden="false" sortIndex="1" defaultSelectionEntryId="af1f-5ed4-99bf-1a55">
@@ -2524,7 +2524,7 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <entryLink import="true" name="Transport" hidden="false" id="2dae-fb6b-27bf-aaf7" type="selectionEntryGroup" targetId="f59a-7dd6-663f-131b"/>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Honour Guard" hidden="false" id="73b9-673b-98af-8fbd">
+    <selectionEntry type="model" import="true" name="Honour Guard" hidden="true" id="73b9-673b-98af-8fbd">
       <costs>
         <cost name="Points" typeId="4deb-313d-6685-f48b" value="30"/>
       </costs>
@@ -2544,6 +2544,13 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="b930-ebc4-b1eb-0a58" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink import="true" name="Bolter" hidden="false" id="79d8-07be-5674-920f" type="selectionEntry" targetId="1fcb-2c8e-4cc2-c033">
           <constraints>
