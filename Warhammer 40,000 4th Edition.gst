@@ -429,7 +429,7 @@
         <attribute name="Details" typeId="1dca-e229-7bd3-0fbb"/>
       </attributes>
       <characteristics>
-        <characteristic name="Details" typeId="acf3-d214-6e51-29fe"/>
+        <characteristic name="Details" typeId="acf3-d214-6e51-29fe">A Chainfist is treated exactly like a Power Fist, but rolls 2D6 for Armour Penetration against Vehicles.</characteristic>
       </characteristics>
     </profile>
     <profile name="Lightning Claw" typeId="b729-49a4-4123-cf00" typeName="Melee Weapon" hidden="false" id="5d6f-948a-8857-ed26">

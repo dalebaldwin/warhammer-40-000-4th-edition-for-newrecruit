@@ -1334,9 +1334,14 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="parent" childId="a10d-d7dd-4f63-b6a0" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="a10d-d7dd-4f63-b6a0" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="f063-218d-bd6a-215f" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntries>
@@ -2493,7 +2498,7 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         </selectionEntryGroup>
       </selectionEntryGroups>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="537e-3242-bf20-0447" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="537e-3242-bf20-0447" includeChildSelections="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -2501,6 +2506,7 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
             <conditionGroup type="and">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="b930-ebc4-b1eb-0a58" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="1202-16ac-4bf1-c237" shared="true"/>
               </conditions>
               <conditionGroups>
                 <conditionGroup type="or">
