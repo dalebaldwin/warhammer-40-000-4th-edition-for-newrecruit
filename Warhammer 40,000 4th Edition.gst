@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-b41a-8226-286b-0dea" name="Warhammer 40,000 4th Edition" battleScribeVersion="2.03" revision="1" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" authorName="Kothra" publicationId="c0d3-c074-f54c-9ec4">
+<gameSystem id="sys-b41a-8226-286b-0dea" name="Warhammer 40,000 4th Edition" battleScribeVersion="2.03" revision="2" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" authorName="Kothra" publicationId="c0d3-c074-f54c-9ec4">
   <categoryEntries>
     <categoryEntry name="HQ" id="0d45-9523-cfd8-4efd" hidden="false"/>
     <categoryEntry name="Elites" id="39ab-2bcd-49d1-cfef" hidden="false"/>
@@ -642,7 +642,9 @@ All open-topped vehicles have the Vulnerable to Blast/Template special rule.
 Units may disembark from an open-topped transport in any direction (but must still disembark within 2&quot;), and may assault in the same turn they disembark.</description>
     </rule>
     <rule name="And They Shall Know No Fear" id="8eaf-de62-f965-125b" hidden="false">
-      <description>Space Marines automatically pass Morale tests to regroup, and can take such tests even if the squad has been reduced to less than 50% by casualties, though all other criteria apply. If Space Marines are caught by a sweeping advance, they are not destroyed and will instead continue to fight normally. If this happens, then the unit is subject to the No Retreat! rule in this round of close combat and may therefore lose additional casualties if outnumbered. Usually troops that regroup may not move normally and always count as moving whether they do or not, but these restrictions do not apply to models with this special rule.</description>
+      <description>Space Marines automatically pass Morale tests to regroup, and can take such tests even if the squad has been reduced to less than 50% by casualties, though all other criteria apply. If Space Marines are caught by a sweeping advance, they are not destroyed and will instead continue to fight normally. If this happens, then the unit is subject to the No Retreat! rule in this round of close combat and may therefore lose additional casualties if outnumbered. Usually troops that regroup may not move normally and always count as moving whether they do or not, but these restrictions do not apply to models with this special rule.
+Units that include Servitors and Familiars are still subject to this rule as long as the unit contains at least one Space Marine.
+Space Marines are still subject to Last Man Standing tests. They will always regroup after each Fall Back move to &apos;reassess&apos; the situation however.</description>
     </rule>
     <rule name="Counter-Attack" id="06c2-8316-1f60-2153" hidden="false">
       <description>This special rule is automatically lost by an independent character joining a unit that does not have this special rule, and vice versa.

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="c99d-b51f-afe5-22cb" name="Space Marines (4E)" gameSystemId="sys-b41a-8226-286b-0dea" gameSystemRevision="1" revision="1" battleScribeVersion="2.03" publicationId="e1e7-bf54-15e0-5ded" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="c99d-b51f-afe5-22cb" name="Space Marines (4E)" gameSystemId="sys-b41a-8226-286b-0dea" gameSystemRevision="1" revision="2" battleScribeVersion="2.03" publicationId="e1e7-bf54-15e0-5ded" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorName="Kothra">
   <sharedProfiles>
     <profile name="Space Marine" typeId="556e697423232344415441232323" typeName="Unit" hidden="false" id="2d36-f6b7-fe66-ff61" noindex="true">
       <characteristics>
@@ -130,6 +130,7 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
       </costs>
       <infoLinks>
         <infoLink name="Space Marine" id="ef4f-7ab9-f47a-211f" hidden="false" type="profile" targetId="2d36-f6b7-fe66-ff61"/>
+        <infoLink name="And They Shall Know No Fear" id="19a5-ae19-d3b0-a238" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Weapons" id="c1d4-8b07-c27d-f077" hidden="false" flatten="true" sortIndex="2">
@@ -556,6 +557,7 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
       </costs>
       <infoLinks>
         <infoLink name="Space Marine Sergeant" id="9b65-307d-79da-3844" hidden="false" type="profile" targetId="4a23-77d6-bb88-e7ac"/>
+        <infoLink name="And They Shall Know No Fear" id="7223-e5fd-4de3-c115" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Terminator Honours" hidden="false" id="b5aa-a35b-4a7b-11e3" type="selectionEntry" targetId="7461-f70a-5205-fe07" sortIndex="1">
@@ -722,6 +724,7 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
       </entryLinks>
       <infoLinks>
         <infoLink name="Rites of Battle" id="f436-84aa-fe2c-c1d0" hidden="false" type="rule" targetId="2443-287f-f8df-ffa4"/>
+        <infoLink name="And They Shall Know No Fear" id="81f4-e2eb-526d-f4a1" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Chapter Chaplain" hidden="false" id="81e5-498e-ee8c-e348" publicationId="e1e7-bf54-15e0-5ded" page="28" sortIndex="2">
@@ -817,6 +820,7 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
       <infoLinks>
         <infoLink name="Litanies of Hate" id="0908-e0fb-b902-ec5a" hidden="false" type="rule" targetId="99d7-eaaa-fb97-4d39"/>
         <infoLink name="Honour of the Chapter" id="0989-248a-d38c-68d6" hidden="false" type="rule" targetId="5233-d4bb-fb4c-dad0"/>
+        <infoLink name="And They Shall Know No Fear" id="1be5-7745-8b55-6546" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Chapter Librarian" hidden="false" id="cd2f-5665-5521-8396" publicationId="e1e7-bf54-15e0-5ded" page="28" sortIndex="3">
@@ -893,6 +897,9 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
           </conditions>
         </modifier>
       </modifiers>
+      <infoLinks>
+        <infoLink name="And They Shall Know No Fear" id="9f76-1d46-a7c7-a631" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Command Squad" hidden="false" id="1202-16ac-4bf1-c237" sortIndex="4">
       <selectionEntryGroups>
@@ -945,6 +952,7 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
               </constraints>
               <infoLinks>
                 <infoLink name="Space Marine" id="64c0-2652-ad07-1e64" hidden="false" type="profile" targetId="2d36-f6b7-fe66-ff61"/>
+                <infoLink name="And They Shall Know No Fear" id="5f4a-ee21-c75a-ca52" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="Armoury" hidden="false" id="7042-ea87-eade-05dd" type="selectionEntryGroup" targetId="armoury1" sortIndex="5">
@@ -1037,6 +1045,7 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
               </constraints>
               <infoLinks>
                 <infoLink name="Space Marine" id="6f2d-dd42-7ba5-e577" hidden="false" type="profile" targetId="2d36-f6b7-fe66-ff61"/>
+                <infoLink name="And They Shall Know No Fear" id="db78-00a2-d57f-4c33" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="Armoury" hidden="false" id="ef4f-3a9a-c55a-ce36" type="selectionEntryGroup" targetId="armoury1" sortIndex="4">
@@ -1159,6 +1168,7 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
               </constraints>
               <infoLinks>
                 <infoLink name="Space Marine" id="6c7f-cfa5-c5e7-b1ed" hidden="false" type="profile" targetId="2d36-f6b7-fe66-ff61"/>
+                <infoLink name="And They Shall Know No Fear" id="fd2d-4cf4-b0f8-2459" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="Armoury" hidden="false" id="99f9-8615-2bb3-1073" type="selectionEntryGroup" targetId="armoury1" sortIndex="3">
@@ -1377,6 +1387,7 @@ A character who is leading or attached to a squad does not stop being an Indepen
     <selectionEntry type="model" import="true" name="Scout" hidden="false" id="acfa-0aee-582c-a411">
       <infoLinks>
         <infoLink name="Scout" id="79a0-f263-4b3d-9efb" hidden="false" type="profile" targetId="728a-c4af-caf8-1024"/>
+        <infoLink name="And They Shall Know No Fear" id="6b32-8d9e-bd74-b175" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Weapons" id="b7ce-82c8-5ccd-fd10" hidden="false" flatten="true" defaultSelectionEntryId="af1f-5ed4-99bf-1a55">
@@ -1463,6 +1474,7 @@ In NewRecruit these bonuses should be automatically applied to a unit&apos;s pro
     <selectionEntry type="model" import="true" name="Scout Sergeant" hidden="false" id="4147-17d1-1cda-a597">
       <infoLinks>
         <infoLink name="Scout Sergeant" id="d25c-be9e-e503-4400" hidden="false" type="profile" targetId="2519-7255-cc1c-a834"/>
+        <infoLink name="And They Shall Know No Fear" id="7433-c2de-6049-f5c4" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Terminator" hidden="false" id="8051-d1f8-666c-c5e2">
@@ -1680,6 +1692,9 @@ In NewRecruit these bonuses should be automatically applied to a unit&apos;s pro
           </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <infoLinks>
+        <infoLink name="And They Shall Know No Fear" id="5431-a276-e734-69ec" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Terminator Sergeant" hidden="false" id="terminatorsergeant">
       <profiles>
@@ -1844,6 +1859,9 @@ In NewRecruit these bonuses should be automatically applied to a unit&apos;s pro
       <entryLinks>
         <entryLink import="true" name="Armoury" hidden="false" id="1e57-ade6-8b4e-f72e" type="selectionEntryGroup" targetId="armoury1" sortIndex="2"/>
       </entryLinks>
+      <infoLinks>
+        <infoLink name="And They Shall Know No Fear" id="3582-5365-950d-40e7" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Razorback" hidden="false" id="ee1d-64c6-0a77-1b03" publicationId="e1e7-bf54-15e0-5ded" page="35">
       <costs>
@@ -2217,6 +2235,7 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
           </modifiers>
         </infoLink>
         <infoLink name="Turbo-Boosters" id="baee-a0dd-c912-239e" hidden="false" type="rule" targetId="793e-3ba7-feb3-8ad4"/>
+        <infoLink name="And They Shall Know No Fear" id="b446-0b56-65fe-09a0" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Heavy Weapon" id="fbd8-3c19-2d85-f1a3" hidden="false" defaultSelectionEntryId="3c64-d5e1-208a-eaa9">
@@ -2659,6 +2678,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
                   </costs>
                 </entryLink>
               </entryLinks>
+              <infoLinks>
+                <infoLink name="And They Shall Know No Fear" id="d20b-729a-4612-cf76" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
+              </infoLinks>
               <profiles>
                 <profile name="Ancient" typeId="556e697423232344415441232323" typeName="Unit" hidden="false" id="5ce5-da25-fae4-f7ae">
                   <characteristics>
@@ -2692,6 +2714,7 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
                 </infoLink>
                 <infoLink name="Terminator Honours" id="6814-9766-0b2d-d35e" hidden="false" type="profile" targetId="46d6-b6af-fe9d-a7a7"/>
                 <infoLink name="Purity Seals" id="4af7-5329-71d3-75d9" hidden="false" type="profile" targetId="a18e-d5ad-8e21-9c88"/>
+                <infoLink name="And They Shall Know No Fear" id="984d-fb90-92f0-5d93" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
               </infoLinks>
               <profiles>
                 <profile name="Chapter Champion" typeId="556e697423232344415441232323" typeName="Unit" hidden="false" id="2045-89bb-02bb-e6c7">
@@ -2783,6 +2806,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
       <costs>
         <cost name="Points" typeId="4deb-313d-6685-f48b" value="30"/>
       </costs>
+      <infoLinks>
+        <infoLink name="And They Shall Know No Fear" id="eacd-c348-0b53-9538" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
+      </infoLinks>
       <profiles>
         <profile name="Honour Guard" typeId="556e697423232344415441232323" typeName="Unit" hidden="false" id="564f-3bb2-04e5-3699">
           <characteristics>
@@ -3479,6 +3505,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
           <description>If a Space Marine vehicle has suffered an Immobilsed or Weapon Destroyed result then there is a change the Techmarine can rekindle its angered war spirit. To do this the Techmarine must start the Movement phase of the Space Marine turn in contact with the damaged vehicle and not be inside it (although he can disembark and begin the repairs), Falling Back, Locked in combat, or Pinned. Roll a D6 and if the result is a 6 then either a Weapon Destroyed or Immobilised result (owning player&apos;s choice) will be repaired. Both the vehicle and the Techmarine (including any unit he leads or has joined) must remain stationary for the entire Movement phase. The repair attempt will be complete before the Shooting phase begins.</description>
         </rule>
       </rules>
+      <infoLinks>
+        <infoLink name="And They Shall Know No Fear" id="1a35-ebd6-dfa1-3dca" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Devastator Squad" hidden="false" id="9a67-bbf2-d922-2bc9" sortIndex="18">
       <categoryLinks>
@@ -3637,6 +3666,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
               </constraints>
             </entryLink>
           </entryLinks>
+          <infoLinks>
+            <infoLink name="And They Shall Know No Fear" id="5f71-0c7d-b7ec-7ecd" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Space Marine Biker" hidden="false" id="bddd-b518-aa98-9fac" sortIndex="2">
           <profiles>
@@ -3713,6 +3745,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
               </conditionGroups>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="And They Shall Know No Fear" id="2645-0752-fae8-1d41" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Skilled Rider" hidden="true" id="4af8-5c00-6ed6-ab9b">
           <infoLinks>
@@ -4035,6 +4070,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
               </constraints>
             </entryLink>
           </entryLinks>
+          <infoLinks>
+            <infoLink name="And They Shall Know No Fear" id="4826-4f8e-6ae9-37d0" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Scout Biker" hidden="false" id="6299-a9e1-0a97-7317" sortIndex="2">
           <profiles>
@@ -4073,6 +4111,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
               </constraints>
             </entryLink>
           </entryLinks>
+          <infoLinks>
+            <infoLink name="And They Shall Know No Fear" id="15d2-363b-1731-029e" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -4994,6 +5035,7 @@ If you select a named chapter from above and choose to use codex divergent trait
         <infoLink name="Infiltrate" id="17bf-070e-be7b-17b7" hidden="false" type="rule" targetId="c27d-09d4-6a09-1bcd"/>
         <infoLink name="Scouts" id="1b00-11d7-4352-0e20" hidden="false" type="rule" targetId="ec7c-9e8c-06ac-06b7"/>
         <infoLink name="Stealth" id="c4d8-9a25-7e60-1ca9" hidden="false" type="rule" targetId="744d-4143-694e-f87f"/>
+        <infoLink name="And They Shall Know No Fear" id="4261-4596-e25b-c766" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1cc7-0f81-4f56-e95b" includeChildSelections="true" includeChildForces="true" automatic="true"/>
@@ -5263,6 +5305,9 @@ If you select a named chapter from above and choose to use codex divergent trait
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2070-1e06-34f6-0602" includeChildSelections="true" includeChildForces="true" automatic="true"/>
       </constraints>
+      <infoLinks>
+        <infoLink name="And They Shall Know No Fear" id="b53f-61c3-287e-bab9" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Captain Lysander" hidden="true" id="c1b7-acf3-e754-5b98">
       <costs>
@@ -5346,6 +5391,9 @@ If you select a named chapter from above and choose to use codex divergent trait
           <description>If an Imperial Fists army including Lysander elects to deploy its Terminators by Deep Strike, Lysander will lead the assault. Make one Reserves roll for all the Terminators in the army, re-rolling the result if desired. All Terminators will therefore arrive on the same turn, though each unit will be placed independently.</description>
         </rule>
       </rules>
+      <infoLinks>
+        <infoLink name="And They Shall Know No Fear" id="5f59-3ff6-23d8-d157" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Chaplain Cassius" hidden="true" id="9df2-f317-1174-40df">
       <categoryLinks>
@@ -5453,6 +5501,7 @@ If you select a named chapter from above and choose to use codex divergent trait
       <infoLinks>
         <infoLink name="Honour of the Chapter" id="bd5e-bbf2-2846-dd29" hidden="false" type="rule" targetId="5233-d4bb-fb4c-dad0"/>
         <infoLink name="Litanies of Hate" id="ca58-02fe-df50-eec1" hidden="false" type="rule" targetId="99d7-eaaa-fb97-4d39"/>
+        <infoLink name="And They Shall Know No Fear" id="c6d5-5e59-1fe4-f298" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
       <costs>
         <cost name="Points" typeId="4deb-313d-6685-f48b" value="160"/>
@@ -5548,6 +5597,9 @@ If you select a named chapter from above and choose to use codex divergent trait
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <infoLinks>
+        <infoLink name="And They Shall Know No Fear" id="3411-3732-6f6f-f84f" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
+      </infoLinks>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
