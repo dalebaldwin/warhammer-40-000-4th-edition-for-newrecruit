@@ -268,7 +268,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Space Marines" id="156d-052d-ed33-def7" hidden="false" sortIndex="2">
           <entryLinks>
-            <entryLink import="true" name="Veteran Space Marine" hidden="false" id="b736-fe2f-fdf5-6dad" type="selectionEntry" targetId="2e11-51bb-7146-b18d" sortIndex="1">
+            <entryLink import="true" name="Veteran Space Marine" hidden="false" id="b736-fe2f-fdf5-6dad" type="selectionEntry" targetId="2e11-51bb-7146-b18d" sortIndex="1" defaultAmount="4">
               <costs>
                 <cost name="Points" typeId="4deb-313d-6685-f48b" value="18"/>
               </costs>
