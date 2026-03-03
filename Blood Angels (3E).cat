@@ -1157,14 +1157,37 @@
         </rule>
       </rules>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Blood Angels Scout Squad" hidden="false" id="5fee-5b5d-d4a3-c880" sortIndex="12">
+    <selectionEntry type="unit" import="true" name="Blood Angels Scout Squad" hidden="false" id="5fee-5b5d-d4a3-c880" sortIndex="12">
       <categoryLinks>
         <categoryLink name="Troops" hidden="false" id="d4db-df86-40a0-286b" targetId="23e2-2a28-50f4-a3c1" primary="true"/>
         <categoryLink name="Blood Angel" hidden="false" id="961d-3da1-1ca1-8958" targetId="e39c-0852-74f1-402d" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Scout Sergeant" hidden="false" id="fac9-ac85-11c7-f1c3" type="selectionEntry" targetId="4147-17d1-1cda-a597" sortIndex="1"/>
-        <entryLink import="true" name="Scout" hidden="false" id="8c76-d8e9-8927-ad27" type="selectionEntry" targetId="acfa-0aee-582c-a411" sortIndex="2"/>
+        <entryLink import="true" name="Scout Sergeant" hidden="false" id="fac9-ac85-11c7-f1c3" type="selectionEntry" targetId="4147-17d1-1cda-a597" sortIndex="1">
+          <costs>
+            <cost name="Points" typeId="4deb-313d-6685-f48b" value="13"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="Terminator Honours" hidden="false" id="b63d-6c99-68e1-3446" type="selectionEntry" targetId="7461-f70a-5205-fe07" sortIndex="2">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="13"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="055d-bc24-9ded-ca06-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="055d-bc24-9ded-ca06-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Scout" hidden="false" id="8c76-d8e9-8927-ad27" type="selectionEntry" targetId="acfa-0aee-582c-a411" sortIndex="2">
+          <costs>
+            <cost name="Points" typeId="4deb-313d-6685-f48b" value="13"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="21d4-9135-4647-1426" includeChildSelections="false"/>
+            <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="d397-f9dc-1496-ef79" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
         <entryLink import="true" name="Transport" hidden="false" id="d3db-8e2e-5698-64f7" type="selectionEntryGroup" targetId="f59a-7dd6-663f-131b"/>
       </entryLinks>
       <infoLinks>
