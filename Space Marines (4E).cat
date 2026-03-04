@@ -1490,8 +1490,16 @@ In NewRecruit these bonuses should be automatically applied to a unit&apos;s pro
         </profile>
       </profiles>
       <modifiers>
-        <modifier type="floor" value="9" field="4c4423232344415441232323" affects="profiles.Unit" position="1" scope="parent"/>
-        <modifier type="increment" value="1" field="4.123232344415441e+21" affects="profiles.Unit" scope="parent"/>
+        <modifier type="floor" value="9" field="4c4423232344415441232323" affects="self.entries.profiles.Unit" position="1" scope="parent">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c918-96c1-1ff1-3df1" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="4.123232344415441e+21" affects="self.entries.profiles.Unit" scope="parent">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c918-96c1-1ff1-3df1" shared="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="1" field="7b4d-2429-970f-cba3">
           <conditionGroups>
             <conditionGroup type="and">
@@ -1501,6 +1509,8 @@ In NewRecruit these bonuses should be automatically applied to a unit&apos;s pro
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="floor" value="9" field="4c4423232344415441232323" affects="profiles.Unit" position="1" scope="parent"/>
+        <modifier type="increment" value="1" field="4.123232344415441e+21" affects="profiles.Unit" scope="parent"/>
       </modifiers>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9949-c3ef-4c32-1d6d" includeChildSelections="false"/>
@@ -2214,7 +2224,28 @@ Drop pods may be used in Standard Missions without your opponent&apos;s agreemen
             <modifier type="replace" value="Terminator Command" field="description" arg="Terminator"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Stubborn" id="8434-e3a0-c7fa-a5b5" hidden="true" type="rule" targetId="e74d-09c0-8669-dbfa">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="9862-c761-5bd2-ffc7" field="category"/>
+            <modifier type="increment" value="5" field="4deb-313d-6685-f48b" affects="self.entries.model" scope="parent"/>
+            <modifier type="add" value="9862-c761-5bd2-ffc7" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Land Raider" hidden="false" id="29de-e7fe-1741-d490">
       <costs>
@@ -3112,6 +3143,7 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
                 <condition type="equalTo" value="0" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
+            <conditionGroup type="and"/>
           </conditionGroups>
         </modifier>
         <modifier type="add" value="915b-6b49-dbe2-78ee" field="category" scope="parent"/>
@@ -6039,6 +6071,7 @@ If you select a named chapter from above and choose to use codex divergent trait
                             <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="terminatorsergeant" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1507-f6be-3680-5e10" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="306d-a124-7618-8d4f" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6673-fdad-40ba-79a1" shared="true"/>
                           </conditions>
                         </conditionGroup>
                         <conditionGroup type="and">
@@ -6240,66 +6273,13 @@ If you select a named chapter from above and choose to use codex divergent trait
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ea75-c1ab-47e4-1c6c" includeChildSelections="false"/>
               </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Standard of Devastation" hidden="true" id="ad82-88c6-291d-d92d">
-              <costs>
-                <cost name="Points" typeId="4deb-313d-6685-f48b" value="35"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e43e-477a-16b4-cf94" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b79e-529a-b3ba-1055" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Standard of Fortitude" hidden="true" id="e58d-1992-db1f-d5ef">
-              <costs>
-                <cost name="Points" typeId="4deb-313d-6685-f48b" value="40"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e43e-477a-16b4-cf94" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="aae3-e220-7554-37f4" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Standard of Retribution" hidden="true" id="f11e-3b99-23cf-2e06">
-              <costs>
-                <cost name="Points" typeId="4deb-313d-6685-f48b" value="30"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e43e-477a-16b4-cf94" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="3b88-ab20-7461-a7fa" includeChildSelections="false"/>
-              </constraints>
+              <profiles>
+                <profile name="Blades of Reason" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="e8b5-0847-cd5c-559c">
+                  <characteristics>
+                    <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">As long as the bearer of the Blades of Reason is alive at the end of the battle, the Dark Angels player rolls a D6 for every enemy model that was slain; on a roll of 6, they do not die and are instead captured by the Dark Angels. Each captured prisoner adds +D6 victory points to the Dark Angels&apos; total in scenarios where victory points are being used. The Blades of Reason may not be used against Necrons or Tyranids.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
@@ -6479,9 +6459,14 @@ If you select a named chapter from above and choose to use codex divergent trait
                   </costs>
                   <modifiers>
                     <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="e43e-477a-16b4-cf94" shared="true"/>
-                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="e43e-477a-16b4-cf94" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </modifier>
                   </modifiers>
                   <profiles>
@@ -6542,7 +6527,9 @@ If you select a named chapter from above and choose to use codex divergent trait
                   <profiles>
                     <profile name="The Lion Helm" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="a1f4-df2b-6c7c-af6c">
                       <characteristics>
-                        <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323"/>
+                        <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">The Lion Helm is carried by a Helmet Bearer. It stays within 2&quot; of the character with the Lion Helm. It can not attack or be attacked.
+The Lion Helm projects a force field  that provides any model (friend or foe) within 3&quot; of the Helmet Bearer with a 4+ Invulnerable save against any shooting attacks.
+The effect of the Lion Helm does not extend to vehicles.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6590,7 +6577,7 @@ If you select a named chapter from above and choose to use codex divergent trait
                   <profiles>
                     <profile name="Cup of Retribution" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="6bfa-09e5-49d1-cd87">
                       <characteristics>
-                        <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323"/>
+                        <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">The Cup follows the usual rules for a Holy Relic. Any model bearing a Holy Relic may reveal it once per battle. This may be done at any time, as long as the model with the Relic does not move during the same turn it is revealed. On the turn the relic is revealed all Space Marines within 2D6&quot; get a +1 Attack bonus for the rest of that turn. Note that the relic may be revealed in an opposing player&apos;s turn if you wish.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6607,6 +6594,87 @@ If you select a named chapter from above and choose to use codex divergent trait
                       </conditionGroups>
                     </modifier>
                   </modifiers>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Standard of Devastation" hidden="true" id="ad82-88c6-291d-d92d">
+                  <costs>
+                    <cost name="Points" typeId="4deb-313d-6685-f48b" value="35"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e43e-477a-16b4-cf94" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b79e-529a-b3ba-1055" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Standard of Devastation" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="5d78-1640-2722-f7a5">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">This Standard follows the same rules as a Sacred Standard. In addition, oncer per battle the bearer can call upon the power of the Standard. This is done in the opponent&apos;s Assault phase, after they have declared any charges but before they have moved. It allows one Dark Angels unit within 6&quot; of the bearer to shoot, as if it were the unit&apos;s shooting phase. The unit counts as moving for the purposes of using weapons, even if they were stationary in their last turn.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Standard of Fortitude" hidden="true" id="e58d-1992-db1f-d5ef">
+                  <costs>
+                    <cost name="Points" typeId="4deb-313d-6685-f48b" value="40"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e43e-477a-16b4-cf94" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="force" shared="true" id="aae3-e220-7554-37f4" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Standard of Fortitude" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="98d4-2797-6f2f-f6b5">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">This Standard follows the same rules as a Sacred Standard. In addition, oncer per battle the bearer can call upon the power of the Standard.  This is done in your own Movement phase. It allows one Dark Angels unit with a model within 6&quot; of the standard bearer to move in the movement phase, but still use any rapid fire weapons in the shooting phase, just as if the unit had been stationary.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Standard of Retribution" hidden="true" id="f11e-3b99-23cf-2e06">
+                  <costs>
+                    <cost name="Points" typeId="4deb-313d-6685-f48b" value="30"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e43e-477a-16b4-cf94" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="force" shared="true" id="3b88-ab20-7461-a7fa" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Standard of Retribution" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="da05-ac8c-aee9-bc3e">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">This Standard follows the same rules as a Sacred Standard. In addition, oncer per battle the bearer can call upon the power of the Standard. This is done in an Assault phase. It allows one Dark Angels unit with a model within 6&quot; of the standard bearer to re-roll any failed To Hit rolls.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
                 </selectionEntry>
               </selectionEntries>
               <constraints>
