@@ -64,6 +64,8 @@
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Deathwing" hidden="false" id="7ec2-0a21-a5bb-8152" type="selectionEntry" targetId="1f0e-c351-e783-f25f" sortIndex="5"/>
+        <entryLink import="true" name="Command Squad" hidden="false" id="acf0-eff0-5d00-1305" type="selectionEntry" targetId="1202-16ac-4bf1-c237" sortIndex="7"/>
+        <entryLink import="true" name="Terminator Command Squad" hidden="false" id="d633-1bfe-9c8f-12ad" type="selectionEntry" targetId="dfad-a748-913f-6a1f" sortIndex="8"/>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="4deb-313d-6685-f48b" value="100"/>
@@ -76,6 +78,8 @@
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Deathwing" hidden="false" id="07a5-bf11-3a89-7865" type="selectionEntry" targetId="1f0e-c351-e783-f25f" sortIndex="4"/>
+        <entryLink import="true" name="Command Squad" hidden="false" id="d2b8-3f32-b32e-b7d8" type="selectionEntry" targetId="1202-16ac-4bf1-c237" sortIndex="6"/>
+        <entryLink import="true" name="Terminator Command Squad" hidden="false" id="14b5-06bd-e7c2-438f" type="selectionEntry" targetId="dfad-a748-913f-6a1f" sortIndex="7"/>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="4deb-313d-6685-f48b" value="85"/>
