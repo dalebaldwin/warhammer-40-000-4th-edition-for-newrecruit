@@ -625,6 +625,7 @@ Fast vehicles may not mount or fire Ordnance weapons.</description>
     </rule>
     <rule name="Tank" id="cdcc-d0b7-80cb-4fa6" hidden="false">
       <description>Tanks follow the normal rules for vehicles of their type, and can perform Tank Shock.</description>
+      <alias>Tanks</alias>
     </rule>
     <rule name="Skimmer" id="f208-29f7-bbe8-160b" hidden="false">
       <description>In addition to following the normal rules for vehicles of their type:
@@ -636,6 +637,7 @@ Skimmers that are immobilized immediately crash, and are destroyed if they moved
 
 
 Skimmers can always move over enemy troops and this neither impedes their movement nor harms the troops below. Enemy troops can attack skimmers in the assault phase, as close combat takes into account close range shooting and grenade lobbing as well as actual hand-to-hand combat. Skimmer tanks can still choose to overrun an enemy unit and perform a Tank Shock in the normal manner.</description>
+      <alias>Skimmers</alias>
     </rule>
     <rule name="Open-topped" id="b94d-4aa2-923e-cdf3" hidden="false">
       <description>Whenever a roll is made on the Vehicle Damage table for an open-topped vehicle, add a 1 to the Damage result.
@@ -852,6 +854,7 @@ Normal barrage and ordnance barrage weapons may fire at unseen targets, but if t
       <description>Standard vehicles can move up to 12&quot; in the Movement phase.
 Weapons on vehicles can be Ordnance weapons, Ordnance barrage weapons, Main weapons (Strength 7 or greater) or Defensive weapons (Strength 6 or less).
 They can fire all weapons, 1 Ordnance weapon, or 1 Ordnance Barrage weapon after remaining stationary, or can fire 1 main weapon and all defensive weapons, or 1 Ordnance weapon when moving up to 6&quot;.</description>
+      <alias>vehicles</alias>
     </rule>
     <rule name="Vehicle Squadron" id="c766-6c30-31f6-fd2a" hidden="false">
       <description>All vehicles in a squadron must move at the same speed. They need to maintain coherency of 4&quot;. 
@@ -864,6 +867,7 @@ When a Squadron is fired at, any hits are distributed evenly amongst the vehicle
 
 
 When engaged in close combat, enemy units must allocate their attacks between the members of a squadron as if each vehicle was a separate unit. Use the movement of individual vehicles to determine how hard they are to hit.</description>
+      <alias>Vehicle Squadrons</alias>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>

@@ -720,14 +720,17 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Armoury" hidden="false" id="4c2c-ceea-e6cc-1a10" type="selectionEntryGroup" targetId="armoury1" sortIndex="2"/>
-        <entryLink import="true" name="Command Squad" hidden="false" id="cbf5-5790-eb1f-5ff3" type="selectionEntry" targetId="1202-16ac-4bf1-c237" sortIndex="3"/>
-        <entryLink import="true" name="Terminator Command Squad" hidden="false" id="8716-c967-f7b5-39ab" type="selectionEntry" targetId="dfad-a748-913f-6a1f" sortIndex="4"/>
+        <entryLink import="true" name="Armoury" hidden="false" id="4c2c-ceea-e6cc-1a10" type="selectionEntryGroup" targetId="armoury1" sortIndex="3"/>
+        <entryLink import="true" name="Command Squad" hidden="false" id="cbf5-5790-eb1f-5ff3" type="selectionEntry" targetId="1202-16ac-4bf1-c237" sortIndex="4"/>
+        <entryLink import="true" name="Terminator Command Squad" hidden="false" id="8716-c967-f7b5-39ab" type="selectionEntry" targetId="dfad-a748-913f-6a1f" sortIndex="5"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Rites of Battle" id="f436-84aa-fe2c-c1d0" hidden="false" type="rule" targetId="2443-287f-f8df-ffa4"/>
         <infoLink name="And They Shall Know No Fear" id="81f4-e2eb-526d-f4a1" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
+      <costs>
+        <cost name="Points" typeId="4deb-313d-6685-f48b" value="60"/>
+      </costs>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Chapter Chaplain" hidden="false" id="81e5-498e-ee8c-e348" publicationId="e1e7-bf54-15e0-5ded" page="28" sortIndex="2">
       <categoryLinks>
@@ -787,7 +790,7 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Armoury" hidden="false" id="c0b3-129e-f51e-2e86" type="selectionEntryGroup" targetId="armoury1" sortIndex="4"/>
+        <entryLink import="true" name="Armoury" hidden="false" id="c0b3-129e-f51e-2e86" type="selectionEntryGroup" targetId="armoury1" sortIndex="5"/>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="4deb-313d-6685-f48b" value="85"/>
@@ -893,7 +896,7 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Armoury" hidden="false" id="95aa-73c1-8bc2-c725" type="selectionEntryGroup" targetId="armoury1" sortIndex="5"/>
+        <entryLink import="true" name="Armoury" hidden="false" id="95aa-73c1-8bc2-c725" type="selectionEntryGroup" targetId="armoury1" sortIndex="6"/>
         <entryLink import="true" name="Force Weapon" hidden="false" id="fe73-e022-b93d-67c8" type="selectionEntry" targetId="bede-9886-e7e7-1175" sortIndex="3">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d536-4b48-1aae-459a-min" includeChildSelections="false"/>
@@ -1782,6 +1785,13 @@ In NewRecruit these bonuses should be automatically applied to a unit&apos;s pro
       <infoLinks>
         <infoLink name="And They Shall Know No Fear" id="5431-a276-e734-69ec" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="increment" value="5" field="4deb-313d-6685-f48b">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Terminator Sergeant" hidden="false" id="terminatorsergeant">
       <profiles>
@@ -1949,6 +1959,13 @@ In NewRecruit these bonuses should be automatically applied to a unit&apos;s pro
       <infoLinks>
         <infoLink name="And They Shall Know No Fear" id="3582-5365-950d-40e7" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="increment" value="5" field="4deb-313d-6685-f48b">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Razorback" hidden="false" id="ee1d-64c6-0a77-1b03" publicationId="e1e7-bf54-15e0-5ded" page="35">
       <costs>
@@ -2294,6 +2311,7 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="0dd7-5b1d-713c-3818" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1507-f6be-3680-5e10" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="306d-a124-7618-8d4f" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3080,6 +3098,7 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="7461-f70a-5205-fe07" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3088,15 +3107,18 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c918-96c1-1ff1-3df1" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="add" value="915b-6b49-dbe2-78ee" field="category" scope="parent"/>
       </modifiers>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="02c1-8abf-85cc-c9c2" includeChildSelections="false" negative="false" automatic="false"/>
-        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="3dd2-7adf-d573-e010" includeChildSelections="false"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="3dd2-7adf-d573-e010" includeChildSelections="false" automatic="true"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Narthecium &amp; Reductor" hidden="false" id="6609-4cc6-252f-d307">
@@ -3573,6 +3595,18 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
                 <cost name="Points" typeId="4deb-313d-6685-f48b" value="10"/>
               </costs>
             </entryLink>
+            <entryLink import="true" name="Plasma Cannon" hidden="true" id="15bb-b556-6569-6034" type="selectionEntry" targetId="dafc-5431-7eff-6557">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="10"/>
+              </costs>
+            </entryLink>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Twin-linked Lascannon" hidden="false" id="5ea6-448d-cbb5-0cc8">
@@ -3788,7 +3822,7 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
           <modifiers>
             <modifier type="set" value="1" field="f6ec-233d-9f04-8944">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="39ab-2bcd-49d1-cfef" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="39ab-2bcd-49d1-cfef" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5004,7 +5038,7 @@ If you select a named chapter from above and choose to use codex divergent trait
             <selectionEntry type="upgrade" import="true" name="Divergent Chapter" hidden="false" id="5746-5a13-e31d-67ae" sortIndex="2"/>
             <selectionEntry type="upgrade" import="true" name="Imperial Fists" hidden="false" id="c9d5-f7d6-67ae-5de6" sortIndex="4">
               <entryLinks>
-                <entryLink import="true" name="Imperial Fists (Divergent)" hidden="false" id="3294-2e89-8eef-69e6" type="selectionEntry" targetId="80a4-2af0-a9a4-aea1">
+                <entryLink import="true" name="Divergent" hidden="false" id="3294-2e89-8eef-69e6" type="selectionEntry" targetId="80a4-2af0-a9a4-aea1">
                   <modifiers>
                     <modifier type="set" value="false" field="hidden">
                       <conditions>
@@ -5017,7 +5051,7 @@ If you select a named chapter from above and choose to use codex divergent trait
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Raven Guard" hidden="false" id="556a-9cc5-d33b-22a9" sortIndex="5">
               <entryLinks>
-                <entryLink import="true" name="Raven Guard (Divergent)" hidden="false" id="094c-837f-2e5e-ba9c" type="selectionEntry" targetId="80a4-2af0-a9a4-aea1">
+                <entryLink import="true" name="Divergent" hidden="false" id="094c-837f-2e5e-ba9c" type="selectionEntry" targetId="80a4-2af0-a9a4-aea1">
                   <modifiers>
                     <modifier type="set" value="false" field="hidden">
                       <conditions>
@@ -5030,7 +5064,7 @@ If you select a named chapter from above and choose to use codex divergent trait
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Salamanders" hidden="false" id="4570-e92c-bed6-35ae" sortIndex="6">
               <entryLinks>
-                <entryLink import="true" name="Salamanders (Divergent)" hidden="false" id="13ae-4393-1284-7dd2" type="selectionEntry" targetId="80a4-2af0-a9a4-aea1">
+                <entryLink import="true" name="Divergent" hidden="false" id="13ae-4393-1284-7dd2" type="selectionEntry" targetId="80a4-2af0-a9a4-aea1">
                   <modifiers>
                     <modifier type="set" value="false" field="hidden">
                       <conditions>
@@ -5043,7 +5077,7 @@ If you select a named chapter from above and choose to use codex divergent trait
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="White Scars" hidden="false" id="1aeb-b53c-622e-4c24" sortIndex="7">
               <entryLinks>
-                <entryLink import="true" name="White Scars (Divergent)" hidden="false" id="d38e-7cc6-beb3-b6b1" type="selectionEntry" targetId="80a4-2af0-a9a4-aea1">
+                <entryLink import="true" name="Divergent" hidden="false" id="d38e-7cc6-beb3-b6b1" type="selectionEntry" targetId="80a4-2af0-a9a4-aea1">
                   <modifiers>
                     <modifier type="set" value="false" field="hidden">
                       <conditions>
@@ -5056,7 +5090,7 @@ If you select a named chapter from above and choose to use codex divergent trait
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Crimson Fists" hidden="false" id="9957-b306-1fc2-fdc2" sortIndex="8">
               <entryLinks>
-                <entryLink import="true" name="Crimson Fists (Divergent)" hidden="false" id="6689-84a6-7505-787c" type="selectionEntry" targetId="80a4-2af0-a9a4-aea1">
+                <entryLink import="true" name="Divergent" hidden="false" id="6689-84a6-7505-787c" type="selectionEntry" targetId="80a4-2af0-a9a4-aea1">
                   <modifiers>
                     <modifier type="set" value="false" field="hidden">
                       <conditions>
@@ -5069,7 +5103,7 @@ If you select a named chapter from above and choose to use codex divergent trait
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Iron Hands" hidden="false" id="d790-0e3c-b7d2-a228" sortIndex="9">
               <entryLinks>
-                <entryLink import="true" name="Iron Hands (Divergent)" hidden="false" id="7c4d-a0d1-07ce-197e" type="selectionEntry" targetId="80a4-2af0-a9a4-aea1">
+                <entryLink import="true" name="Divergent" hidden="false" id="7c4d-a0d1-07ce-197e" type="selectionEntry" targetId="80a4-2af0-a9a4-aea1">
                   <modifiers>
                     <modifier type="set" value="false" field="hidden">
                       <conditions>
@@ -5082,7 +5116,7 @@ If you select a named chapter from above and choose to use codex divergent trait
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Blood Ravens" hidden="false" id="527e-213f-68e7-6412" sortIndex="10">
               <entryLinks>
-                <entryLink import="true" name="Blood Ravens (Divergent)" hidden="false" id="8c1c-0799-daa5-626f" type="selectionEntry" targetId="80a4-2af0-a9a4-aea1">
+                <entryLink import="true" name="Divergent" hidden="false" id="8c1c-0799-daa5-626f" type="selectionEntry" targetId="80a4-2af0-a9a4-aea1">
                   <modifiers>
                     <modifier type="set" value="false" field="hidden">
                       <conditions>
@@ -5939,9 +5973,16 @@ If you select a named chapter from above and choose to use codex divergent trait
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="fb5c-116d-3a1f-a9f8" shared="true"/>
                         <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="c918-96c1-1ff1-3df1" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="fb5c-116d-3a1f-a9f8" shared="true"/>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -5984,7 +6025,8 @@ If you select a named chapter from above and choose to use codex divergent trait
             </entryLink>
             <entryLink import="true" name="Space Marine Bike" hidden="false" id="88dd-cb12-6c54-cb33" type="selectionEntry" targetId="da0f-af82-52b0-763e">
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="598e-5afc-63f1-0f6e" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="598e-5afc-63f1-0f6e" includeChildSelections="false" automatic="true"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1247-f83a-dc92-b07f" includeChildSelections="false" automatic="true"/>
               </constraints>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -6019,6 +6061,11 @@ If you select a named chapter from above and choose to use codex divergent trait
                       </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
+                </modifier>
+                <modifier type="set" value="1" field="1247-f83a-dc92-b07f">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <costs>
@@ -6127,6 +6174,7 @@ If you select a named chapter from above and choose to use codex divergent trait
                     <conditionGroup type="and">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="e39c-0852-74f1-402d" shared="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="a10d-d7dd-4f63-b6a0" shared="true"/>
                       </conditions>
                       <conditionGroups>
                         <conditionGroup type="or">
@@ -6265,6 +6313,7 @@ If you select a named chapter from above and choose to use codex divergent trait
                           <conditions>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="terminatorsergeant" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="dfad-a748-913f-6a1f" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -6273,7 +6322,7 @@ If you select a named chapter from above and choose to use codex divergent trait
                 </entryLink>
                 <entryLink import="true" name="Terminator Armour" hidden="false" id="fb5c-116d-3a1f-a9f8" type="selectionEntry" targetId="a10d-d7dd-4f63-b6a0" sortIndex="2">
                   <constraints>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="9ce1-1948-e069-eca9"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="9ce1-1948-e069-eca9" automatic="true"/>
                   </constraints>
                   <modifierGroups>
                     <modifierGroup type="and">
@@ -6282,11 +6331,21 @@ If you select a named chapter from above and choose to use codex divergent trait
                         <modifier type="set" value="1" field="9ce1-1948-e069-eca9"/>
                       </modifiers>
                       <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="terminatorsergeant" shared="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="dfad-a748-913f-6a1f" shared="true" includeChildSelections="true"/>
-                          </conditions>
+                        <conditionGroup type="or">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="terminatorsergeant" shared="true"/>
+                                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="dfad-a748-913f-6a1f" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+                                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c918-96c1-1ff1-3df1" shared="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
                         </conditionGroup>
                       </conditionGroups>
                     </modifierGroup>
@@ -6374,6 +6433,8 @@ If you select a named chapter from above and choose to use codex divergent trait
                           <conditions>
                             <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="81e5-498e-ee8c-e348" shared="true" includeChildSelections="true"/>
                             <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="e43e-477a-16b4-cf94" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="e39c-0852-74f1-402d" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -6420,7 +6481,6 @@ If you select a named chapter from above and choose to use codex divergent trait
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="e43e-477a-16b4-cf94" shared="true"/>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="3b16-fe0b-6073-e8d3" shared="true"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -7567,9 +7627,16 @@ If you select a named chapter from above and choose to use codex divergent trait
                       <conditionGroups>
                         <conditionGroup type="or">
                           <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9a67-bbf2-d922-2bc9" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="16bd-1997-ce61-f3ce" shared="true"/>
                           </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9a67-bbf2-d922-2bc9" shared="true"/>
+                                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="39ab-2bcd-49d1-cfef" shared="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
                         </conditionGroup>
                       </conditionGroups>
                     </conditionGroup>
@@ -7614,8 +7681,15 @@ If you select a named chapter from above and choose to use codex divergent trait
                         <conditionGroup type="or">
                           <conditions>
                             <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="16bd-1997-ce61-f3ce" shared="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9a67-bbf2-d922-2bc9" shared="true"/>
                           </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9a67-bbf2-d922-2bc9" shared="true"/>
+                                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="39ab-2bcd-49d1-cfef" shared="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
                         </conditionGroup>
                       </conditionGroups>
                     </conditionGroup>
@@ -7953,9 +8027,9 @@ If when using this power the Librarian rolls a 12 on his Psychic test, resolve t
         <categoryLink targetId="0d45-9523-cfd8-4efd" id="e9d8-9961-1a00-5a4c" primary="true" name="HQ"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Command Squad" hidden="false" id="3c1a-6752-3b87-c353" type="selectionEntry" targetId="1202-16ac-4bf1-c237" sortIndex="5"/>
-        <entryLink import="true" name="Terminator Command Squad" hidden="false" id="e031-03af-4134-0b9f" type="selectionEntry" targetId="dfad-a748-913f-6a1f" sortIndex="6"/>
-        <entryLink import="true" name="Honour Guard Command Squad" hidden="false" id="d586-509e-514b-a551" type="selectionEntry" targetId="f063-218d-bd6a-215f" sortIndex="7"/>
+        <entryLink import="true" name="Command Squad" hidden="false" id="3c1a-6752-3b87-c353" type="selectionEntry" targetId="1202-16ac-4bf1-c237" sortIndex="7"/>
+        <entryLink import="true" name="Terminator Command Squad" hidden="false" id="e031-03af-4134-0b9f" type="selectionEntry" targetId="dfad-a748-913f-6a1f" sortIndex="8"/>
+        <entryLink import="true" name="Honour Guard Command Squad" hidden="false" id="d586-509e-514b-a551" type="selectionEntry" targetId="f063-218d-bd6a-215f" sortIndex="9"/>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="4deb-313d-6685-f48b" value="100"/>
@@ -7966,9 +8040,9 @@ If when using this power the Librarian rolls a 12 on his Psychic test, resolve t
         <categoryLink targetId="0d45-9523-cfd8-4efd" id="81b0-86a5-e54c-a19c" primary="true" name="HQ"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Command Squad" hidden="false" id="f758-cf36-a880-c07e" type="selectionEntry" targetId="1202-16ac-4bf1-c237" sortIndex="5"/>
-        <entryLink import="true" name="Terminator Command Squad" hidden="false" id="382c-03b2-8c7e-4a6f" type="selectionEntry" targetId="dfad-a748-913f-6a1f" sortIndex="6"/>
-        <entryLink import="true" name="Honour Guard Command Squad" hidden="false" id="aba0-2f29-acdb-c064" type="selectionEntry" targetId="f063-218d-bd6a-215f" sortIndex="7"/>
+        <entryLink import="true" name="Command Squad" hidden="false" id="f758-cf36-a880-c07e" type="selectionEntry" targetId="1202-16ac-4bf1-c237" sortIndex="6"/>
+        <entryLink import="true" name="Terminator Command Squad" hidden="false" id="382c-03b2-8c7e-4a6f" type="selectionEntry" targetId="dfad-a748-913f-6a1f" sortIndex="7"/>
+        <entryLink import="true" name="Honour Guard Command Squad" hidden="false" id="aba0-2f29-acdb-c064" type="selectionEntry" targetId="f063-218d-bd6a-215f" sortIndex="8"/>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="4deb-313d-6685-f48b" value="85"/>
@@ -7994,7 +8068,7 @@ If when using this power the Librarian rolls a 12 on his Psychic test, resolve t
         </modifier>
       </modifiers>
       <entryLinks>
-        <entryLink import="true" name="Honour Guard Command Squad" hidden="false" id="4c68-8f32-c6e3-678a" type="selectionEntry" targetId="f063-218d-bd6a-215f" sortIndex="5"/>
+        <entryLink import="true" name="Honour Guard Command Squad" hidden="false" id="4c68-8f32-c6e3-678a" type="selectionEntry" targetId="f063-218d-bd6a-215f" sortIndex="6"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="85fc-dbe4-afdc-0ea1" automatic="true"/>

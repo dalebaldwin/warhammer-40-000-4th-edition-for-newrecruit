@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="false" id="e91d-d504-5f58-6e99" name="Dark Angels (3E)" gameSystemId="sys-b41a-8226-286b-0dea" gameSystemRevision="2" revision="1" authorName="Kothra" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <catalogueLinks>
+    <catalogueLink type="catalogue" name="Space Marines (4E)" id="92c6-d8b3-84b5-653e" importRootEntries="false" targetId="c99d-b51f-afe5-22cb"/>
+  </catalogueLinks>
+  <entryLinks>
+    <entryLink import="true" name="Tactical Squad" hidden="false" id="a5dd-40fd-722c-7cae" type="selectionEntry" targetId="16bd-1997-ce61-f3ce">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="c6c4-2b98-82e7-d488" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Commander" hidden="false" id="6673-2bce-9ffb-26cf" type="selectionEntry" targetId="3e34-7cee-6d3e-25f1">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="f810-7460-395b-c814" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Deathwing" hidden="false" id="919a-9875-12bd-4c24" targetId="915b-6b49-dbe2-78ee" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="4deb-313d-6685-f48b" value="60"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Deathwing" hidden="false" id="374f-abac-7798-0660" type="selectionEntry" targetId="1f0e-c351-e783-f25f" sortIndex="2"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Chapter Librarian" hidden="false" id="b5a8-8df1-fa47-117d" type="selectionEntry" targetId="cd2f-5665-5521-8396">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="585e-e193-13c2-b2f5" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Deathwing" hidden="false" id="52ab-dfa8-09c9-0f18" targetId="915b-6b49-dbe2-78ee" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Deathwing" hidden="false" id="7ec2-0a21-a5bb-8152" type="selectionEntry" targetId="1f0e-c351-e783-f25f" sortIndex="5"/>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="4deb-313d-6685-f48b" value="100"/>
+      </costs>
+    </entryLink>
+    <entryLink import="true" name="Chapter Chaplain" hidden="false" id="71ab-6b72-7c41-7003" type="selectionEntry" targetId="81e5-498e-ee8c-e348">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="8356-46ef-afd0-bf48" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Deathwing" hidden="false" id="0a6f-9941-5f2e-c68b" targetId="915b-6b49-dbe2-78ee" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Deathwing" hidden="false" id="07a5-bf11-3a89-7865" type="selectionEntry" targetId="1f0e-c351-e783-f25f" sortIndex="4"/>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="4deb-313d-6685-f48b" value="85"/>
+      </costs>
+    </entryLink>
+    <entryLink import="true" name="Assault Squad" hidden="false" id="c3e7-d315-fc08-b1bb" type="selectionEntry" targetId="1841-812c-ce41-981f">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="b5dc-5e79-119d-4226" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Terminator Squad" hidden="false" id="5902-1d74-f24d-d4ed" type="selectionEntry" targetId="cc82-1b5f-3ed2-487a">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="2a60-7d39-8732-84d7" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Deathwing" hidden="false" id="c32d-01ee-d90a-805d" targetId="915b-6b49-dbe2-78ee" primary="false"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Stubborn" id="2a39-8a3f-7a89-915d" hidden="false" type="rule" targetId="e74d-09c0-8669-dbfa"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" value="5" field="4deb-313d-6685-f48b">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Terminator Assault Squad" hidden="false" id="073c-e069-3443-3a45" type="selectionEntry" targetId="bb8c-83a8-42b3-ef68">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="01fc-96c1-0acd-5fd1" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Deathwing" hidden="false" id="b97c-488b-87f1-497e" targetId="915b-6b49-dbe2-78ee" primary="false"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Stubborn" id="7928-61d9-c071-35d0" hidden="false" type="rule" targetId="e74d-09c0-8669-dbfa"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" value="5" field="4deb-313d-6685-f48b">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Techmarine" hidden="false" id="7135-86b3-776a-0111" type="selectionEntry" targetId="926d-0021-c465-da7c">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="0dd3-306d-a77d-6c65" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Land Raider" hidden="false" id="6a3e-d6f8-0881-5860" type="selectionEntry" targetId="29de-e7fe-1741-d490">
+      <categoryLinks>
+        <categoryLink name="Heavy Support" hidden="false" id="c389-5d17-3390-877e" targetId="6a52-1951-5b0c-024e" primary="true"/>
+        <categoryLink name="Dark Angel" hidden="false" id="6a33-df0d-f0ab-fb02" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="915b-6b49-dbe2-78ee" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Land Raider Crusader" hidden="false" id="01fb-f35d-699f-30a8" type="selectionEntry" targetId="dcea-afce-6ef5-36b2">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="2cad-8377-6761-67b7" includeChildSelections="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="0fcf-7c99-d037-87b8" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="915b-6b49-dbe2-78ee" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Land Speeder Squadron" hidden="false" id="1de0-4d18-e6dd-642c" type="selectionEntry" targetId="4a76-a7b0-9871-cc49">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="d223-ecb8-e8c4-8b44" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Attack Bike Squadron" hidden="false" id="e703-89a9-b674-3152" type="selectionEntry" targetId="dd31-a3d9-3d3b-cb2d">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="bfaf-967e-6bc6-843f" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Scout Bike Squadron" hidden="false" id="f42c-b021-1046-9393" type="selectionEntry" targetId="9951-a482-9601-e346">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="4dd1-bcb8-c955-95e9" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Scout Squad" hidden="false" id="4da9-8bf6-28e6-0167" type="selectionEntry" targetId="8a0f-5a7a-17cb-568f">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="910c-a8c4-3499-e143" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Bike Squadron" hidden="false" id="dd7e-e6c8-7adf-5252" type="selectionEntry" targetId="6acb-a381-8f5c-abdb">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="fd38-9322-4ae9-45d0" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Predator Destructor" hidden="false" id="9777-cedf-7c13-24c6" type="selectionEntry" targetId="3f4c-2d7d-e1b4-59cd">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="54b7-a6e3-20f0-df83" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Devastator Squad" hidden="false" id="8d7c-98c0-7bda-4a8a" type="selectionEntry" targetId="9a67-bbf2-d922-2bc9">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="437d-d531-4ee1-76c4" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Dreadnought" hidden="false" id="3d3c-99d3-4f09-4353" type="selectionEntry" targetId="985e-dda7-9cd9-a782">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="bcc1-3e2b-26e5-c47c" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Predator Annihilator" hidden="false" id="2f27-6ede-09b1-6cb9" type="selectionEntry" targetId="7737-f7b1-95b7-acab">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="c8c9-4779-6a39-2ac6" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Whirlwind" hidden="false" id="edfd-d286-9538-98eb" type="selectionEntry" targetId="0877-32be-d27e-405e">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="603a-9d22-a374-08a0" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Vindicator" hidden="false" id="3623-0cdc-f8cd-2c14" type="selectionEntry" targetId="2341-1759-1cd3-650c">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="2521-27f0-f686-c00a" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Veteran Squad" hidden="false" id="e442-24df-7ead-9fc1" type="selectionEntry" targetId="veteransquad">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="9afb-6eb8-d92d-4b1b" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Army Specialization" hidden="false" id="952e-4600-1473-f600" type="selectionEntry" targetId="3522-d9d2-3eef-2d2d" sortIndex="0"/>
+    <entryLink import="true" name="Terminator Assault Squad" hidden="true" id="dee4-2085-c487-96c9" type="selectionEntry" targetId="bb8c-83a8-42b3-ef68">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="6d9f-2f48-7363-2e4f" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Deathwing" hidden="false" id="01dc-85eb-0119-a173" targetId="915b-6b49-dbe2-78ee" primary="false"/>
+        <categoryLink name="Fast Attack" hidden="false" id="7553-65f2-da79-9a05" targetId="11cf-dc94-5c14-2c2a" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Stubborn" id="bdf7-5a3e-9167-1f1d" hidden="false" type="rule" targetId="e74d-09c0-8669-dbfa"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" value="5" field="4deb-313d-6685-f48b">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="39ab-2bcd-49d1-cfef" field="category"/>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Terminator Assault Squad" hidden="true" id="cc9c-2829-31d2-6000" type="selectionEntry" targetId="bb8c-83a8-42b3-ef68">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="9d14-a355-b14e-ab16" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Deathwing" hidden="false" id="b26b-6c49-42c2-f26e" targetId="915b-6b49-dbe2-78ee" primary="false"/>
+        <categoryLink name="Troops" hidden="false" id="ec7e-b49e-00b3-3371" targetId="23e2-2a28-50f4-a3c1" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Stubborn" id="06eb-c168-4f0f-06ff" hidden="false" type="rule" targetId="e74d-09c0-8669-dbfa"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" value="5" field="4deb-313d-6685-f48b">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="39ab-2bcd-49d1-cfef" field="category"/>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Terminator Assault Squad" hidden="true" id="f6c4-5b9f-1e0c-af2d" type="selectionEntry" targetId="bb8c-83a8-42b3-ef68">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="3751-f76d-9db3-790d" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Deathwing" hidden="false" id="74dd-6b7d-5122-486a" targetId="915b-6b49-dbe2-78ee" primary="false"/>
+        <categoryLink name="Heavy Support" hidden="false" id="6338-6560-2dca-5940" targetId="6a52-1951-5b0c-024e" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Stubborn" id="12c3-45af-4ac9-cfdb" hidden="false" type="rule" targetId="e74d-09c0-8669-dbfa"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" value="5" field="4deb-313d-6685-f48b">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="39ab-2bcd-49d1-cfef" field="category"/>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Terminator Squad" hidden="true" id="464c-5b26-c581-149d" type="selectionEntry" targetId="cc82-1b5f-3ed2-487a">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="feb7-886d-43f9-d939" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Deathwing" hidden="false" id="1b1d-ebf0-89db-e3b7" targetId="915b-6b49-dbe2-78ee" primary="false"/>
+        <categoryLink name="Troops" hidden="false" id="a9df-6cff-b08b-4668" targetId="23e2-2a28-50f4-a3c1" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Stubborn" id="a61e-aeec-9e30-d873" hidden="false" type="rule" targetId="e74d-09c0-8669-dbfa"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" value="5" field="4deb-313d-6685-f48b">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="39ab-2bcd-49d1-cfef" field="category"/>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Terminator Squad" hidden="true" id="7804-d7ee-862a-6a53" type="selectionEntry" targetId="cc82-1b5f-3ed2-487a">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="59e9-c73e-3053-d08c" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Deathwing" hidden="false" id="78ef-bff7-d2d2-bacd" targetId="915b-6b49-dbe2-78ee" primary="false"/>
+        <categoryLink name="Fast Attack" hidden="false" id="ae3b-60ea-575b-f9a5" targetId="11cf-dc94-5c14-2c2a" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Stubborn" id="2d18-5d79-f6a0-19e0" hidden="false" type="rule" targetId="e74d-09c0-8669-dbfa"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" value="5" field="4deb-313d-6685-f48b">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="39ab-2bcd-49d1-cfef" field="category"/>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Terminator Squad" hidden="true" id="e1d8-f287-0f56-6be9" type="selectionEntry" targetId="cc82-1b5f-3ed2-487a">
+      <categoryLinks>
+        <categoryLink name="Dark Angel" hidden="false" id="43fb-6f78-f5e9-c7ec" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Deathwing" hidden="false" id="7628-18af-aa7e-e9bc" targetId="915b-6b49-dbe2-78ee" primary="false"/>
+        <categoryLink name="Heavy Support" hidden="false" id="4ccc-1779-d9bb-55a3" targetId="6a52-1951-5b0c-024e" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Stubborn" id="d4e9-8677-593b-012f" hidden="false" type="rule" targetId="e74d-09c0-8669-dbfa"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" value="5" field="4deb-313d-6685-f48b">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="39ab-2bcd-49d1-cfef" field="category"/>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </entryLink>
+  </entryLinks>
+  <categoryEntries>
+    <categoryEntry name="Deathwing" id="915b-6b49-dbe2-78ee" hidden="false"/>
+    <categoryEntry name="Ravenwing" id="a3e2-4142-4975-c3f4" hidden="false"/>
+  </categoryEntries>
+  <selectionEntries>
+    <selectionEntry type="unit" import="true" name="Ravenwing Bike Squadron" hidden="false" id="712c-08d9-66b3-04f7">
+      <categoryLinks>
+        <categoryLink name="Fast Attack" hidden="false" id="5f05-f660-048a-977b" targetId="11cf-dc94-5c14-2c2a" primary="true"/>
+        <categoryLink name="Dark Angel" hidden="false" id="2c88-9453-9ad6-f43e" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Ravenwing" hidden="false" id="8080-1eec-7624-540f" targetId="a3e2-4142-4975-c3f4" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ravenwing Attack Bike Squadron" hidden="false" id="3e57-b3a6-9536-fcc6">
+      <categoryLinks>
+        <categoryLink name="Fast Attack" hidden="false" id="6129-cf74-3fac-30d0" targetId="11cf-dc94-5c14-2c2a" primary="true"/>
+        <categoryLink name="Dark Angel" hidden="false" id="b568-9530-fa94-95e9" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Ravenwing" hidden="false" id="8505-fb8d-c4e8-eadc" targetId="a3e2-4142-4975-c3f4" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ravenwing Land Speeder Squadron" hidden="false" id="5620-da61-722e-da11">
+      <categoryLinks>
+        <categoryLink name="Fast Attack" hidden="false" id="483e-1971-6d64-ba42" targetId="11cf-dc94-5c14-2c2a" primary="true"/>
+        <categoryLink name="Dark Angel" hidden="false" id="9cb7-0ca8-52d6-8a0e" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Ravenwing" hidden="false" id="af08-fc53-05df-c8e0" targetId="a3e2-4142-4975-c3f4" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="046a-33e8-8222-3cd4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Master of the Ravenwing" hidden="true" id="264d-81f0-01d1-4274">
+      <categoryLinks>
+        <categoryLink name="HQ" hidden="false" id="c215-bfce-b787-df68" targetId="0d45-9523-cfd8-4efd" primary="true"/>
+        <categoryLink name="Dark Angel" hidden="false" id="9a2d-b27b-52f9-4feb" targetId="9862-c761-5bd2-ffc7" primary="false"/>
+        <categoryLink name="Character" hidden="false" id="d9b1-5d1a-faed-4d24" targetId="c918-96c1-1ff1-3df1" primary="false"/>
+        <categoryLink name="Ravenwing" hidden="false" id="b0a6-1201-59d8-82c3" targetId="a3e2-4142-4975-c3f4" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Mount" id="310d-815f-95b0-110d" hidden="false" flatten="true" defaultSelectionEntryId="41e8-7ac6-3f6d-2807">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Master of the Ravenwing on Bike" hidden="false" id="41e8-7ac6-3f6d-2807" sortIndex="1"/>
+            <selectionEntry type="unit" import="true" name="Master of the Ravenwing on Land Speeder" hidden="true" id="b544-c45d-663d-d850" sortIndex="2">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1500" field="4deb-313d-6685-f48b" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Master of the Ravenwing&apos;s Land Speeder" typeId="56656869636c6523232344415441232323" typeName="Vehicle" hidden="false" id="4c17-eee8-38f2-4ded">
+                  <characteristics>
+                    <characteristic name="Front" typeId="46726f6e7423232344415441232323">10</characteristic>
+                    <characteristic name="Side" typeId="5.369646523232344e+27">10</characteristic>
+                    <characteristic name="Rear" typeId="5.265617223232345e+27">10</characteristic>
+                    <characteristic name="BS" typeId="a6a5-1595-da9e-6155">5</characteristic>
+                    <characteristic name="Type" typeId="5.479706523232345e+27">Fast, Skimmer</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="255"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Grand Master of the Ravenwing on Bike" hidden="false" id="8974-a36d-1c88-0567" sortIndex="2">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="15"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cc8e-2338-3460-cc63-min" includeChildSelections="false" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc8e-2338-3460-cc63-max" includeChildSelections="false" automatic="true"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="b627-f1ff-53fe-8f2f-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b627-f1ff-53fe-8f2f-max" includeChildSelections="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="Points" typeId="4deb-313d-6685-f48b" value="95"/>
+      </costs>
+    </selectionEntry>
+  </selectionEntries>
+  <sharedSelectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Army Specialization" hidden="false" id="3522-d9d2-3eef-2d2d">
+      <categoryLinks>
+        <categoryLink name="Force Customization" hidden="false" id="eeac-8ae8-a188-5d00" targetId="7466-cf81-3a11-64ab" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Specialization" id="a0da-527b-3c9f-af10" hidden="false" flatten="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Deathwing Army" hidden="false" id="046a-33e8-8222-3cd4">
+              <categoryLinks>
+                <categoryLink name="Force Customization" hidden="false" id="1586-b088-664c-eb21" targetId="7466-cf81-3a11-64ab" primary="true"/>
+              </categoryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="76a1-24e2-978e-e4f2" includeChildSelections="false" automatic="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ravenwing Army" hidden="false" id="213a-8bf1-e310-6baa">
+              <categoryLinks>
+                <categoryLink name="Force Customization" hidden="false" id="b7d1-2503-0b02-d4fa" targetId="7466-cf81-3a11-64ab" primary="true"/>
+              </categoryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="305e-d070-2599-c1a3" includeChildSelections="false" automatic="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3439-25ca-b6b8-6ad5" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="905d-df47-99f1-cbd3-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="905d-df47-99f1-cbd3-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+  </sharedSelectionEntries>
+</catalogue>
