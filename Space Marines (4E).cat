@@ -903,7 +903,7 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
       </selectionEntries>
       <infoLinks>
         <infoLink name="Litanies of Hate" id="0908-e0fb-b902-ec5a" hidden="false" type="rule" targetId="99d7-eaaa-fb97-4d39"/>
-        <infoLink name="Honour of the Chapter" id="0989-248a-d38c-68d6" hidden="false" type="rule" targetId="5233-d4bb-fb4c-dad0"/>
+        <infoLink name="Honour of the Chapter" id="0989-248a-d38c-68d6" hidden="false" type="rule" targetId="9cb2-4889-4b6c-190d"/>
         <infoLink name="And They Shall Know No Fear" id="1be5-7745-8b55-6546" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
       <modifiers>
@@ -1646,12 +1646,12 @@ In NewRecruit these bonuses should be automatically applied to a unit&apos;s pro
         </profile>
       </profiles>
       <modifiers>
-        <modifier type="floor" value="9" field="4c4423232344415441232323" affects="self.entries.profiles.Unit" position="1" scope="parent">
+        <modifier type="floor" value="9" field="4c4423232344415441232323" affects="entries.profiles.Unit" position="1" scope="parent">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c918-96c1-1ff1-3df1" shared="true"/>
           </conditions>
         </modifier>
-        <modifier type="increment" value="1" field="4.123232344415441e+21" affects="self.entries.profiles.Unit" scope="parent">
+        <modifier type="increment" value="1" field="4.123232344415441e+21" affects="entries.profiles.Unit" scope="parent">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c918-96c1-1ff1-3df1" shared="true"/>
           </conditions>
@@ -6112,7 +6112,7 @@ If you select a named chapter from above and choose to use codex divergent trait
         </rule>
       </rules>
       <infoLinks>
-        <infoLink name="Honour of the Chapter" id="bd5e-bbf2-2846-dd29" hidden="false" type="rule" targetId="5233-d4bb-fb4c-dad0"/>
+        <infoLink name="Honour of the Chapter" id="bd5e-bbf2-2846-dd29" hidden="false" type="rule" targetId="9cb2-4889-4b6c-190d"/>
         <infoLink name="Litanies of Hate" id="ca58-02fe-df50-eec1" hidden="false" type="rule" targetId="99d7-eaaa-fb97-4d39"/>
         <infoLink name="And They Shall Know No Fear" id="c6d5-5e59-1fe4-f298" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
@@ -6799,6 +6799,13 @@ If you select a named chapter from above and choose to use codex divergent trait
                   <costs>
                     <cost name="Points" typeId="4deb-313d-6685-f48b" value="45"/>
                   </costs>
+                  <profiles>
+                    <profile name="Holy Shroud" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="275e-f199-9e5c-d812">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">Any Blood Angels unit with a model within 6&quot; of a Holy Shroud will ignore any negative modifiers to their Leadership when taking Morale checks (eg, penalties for being below half strength or outnumbered in an assault). In effect, they always make these tests using the Leadership characteristic on their profile.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Grail" hidden="true" id="02c0-13c8-4206-7b85">
                   <costs>
@@ -6825,6 +6832,16 @@ If you select a named chapter from above and choose to use codex divergent trait
                       </conditionGroups>
                     </modifier>
                   </modifiers>
+                  <profiles>
+                    <profile name="Grail" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="a001-e7de-4daf-b244">
+                      <characteristics>
+                        <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">When a Blood Angel unit with the Grail wipes out an opponent in close combat, they roll 2D6&quot; and add them together when determining how far they may consolidate.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ca09-9cba-de5b-1cb5" includeChildSelections="false"/>
+                  </constraints>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Book of Salvation" hidden="true" id="7fcd-63c3-4169-b9db">
                   <costs>
@@ -8237,6 +8254,16 @@ If you select a named chapter from above and choose to use codex divergent trait
               <costs>
                 <cost name="Points" typeId="4deb-313d-6685-f48b" value="9"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="1" field="79da-85ff-9184-ad05">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d018-499a-2d02-483e" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="79da-85ff-9184-ad05" includeChildSelections="false" automatic="true"/>
+              </constraints>
             </entryLink>
             <entryLink import="true" name="Fear of the Darkness" hidden="false" id="a8f4-c953-5978-67da" type="selectionEntry" targetId="b8c9-abcf-e406-1379" sortIndex="3">
               <costs>
@@ -8268,6 +8295,7 @@ If you select a named chapter from above and choose to use codex divergent trait
             <selectionEntry type="upgrade" import="true" name="Storm of the Emperor&apos;s Wrath" hidden="false" id="deac-1756-e112-bc43" sortIndex="1" defaultAmount="1">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1fbf-cb38-0082-a50b" includeChildSelections="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="6eb2-11db-1c7c-ad91" includeChildSelections="false" automatic="true"/>
               </constraints>
               <profiles>
                 <profile name="Storm of the Emperor&apos;s Wrath" typeId="9c33-b0c8-74bd-e5a7" typeName="Psychic Power (Attack)" hidden="false" id="55dc-5993-a426-a130">
@@ -8280,6 +8308,13 @@ If you select a named chapter from above and choose to use codex divergent trait
                   </characteristics>
                 </profile>
               </profiles>
+              <modifiers>
+                <modifier type="set" value="1" field="6eb2-11db-1c7c-ad91">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d018-499a-2d02-483e" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Fury of the Ancients" hidden="false" id="c672-6a62-b00d-52de" sortIndex="2">
               <costs>
@@ -8627,7 +8662,7 @@ If when using this power the Librarian rolls a 12 on his Psychic test, resolve t
     <rule name="Rites of Battle" id="2443-287f-f8df-ffa4" hidden="false">
       <description>If a Space Marine Commander is on the table then all other Space Marine squads may used his Leadership for Morale, Pinning, or Leadership tests (but not Psychic tests).</description>
     </rule>
-    <rule name="Honour of the Chapter" id="5233-d4bb-fb4c-dad0" hidden="false">
+    <rule name="Honour of the Chapter" id="9cb2-4889-4b6c-190d" hidden="false">
       <description>Chaplains embody the honour of their Chapter. They, and all members of any Space Marine squad they have joined, lead, or attached to are Fearless.</description>
     </rule>
     <rule name="Litanies of Hate" id="99d7-eaaa-fb97-4d39" hidden="false">
