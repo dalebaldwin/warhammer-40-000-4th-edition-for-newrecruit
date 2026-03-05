@@ -731,6 +731,46 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
       <costs>
         <cost name="Points" typeId="4deb-313d-6685-f48b" value="60"/>
       </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Deathwing" hidden="true" id="e8ed-faf9-1be8-ac84" sortIndex="2">
+          <costs>
+            <cost name="Points" typeId="4deb-313d-6685-f48b" value="5"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Stubborn" id="300d-0ada-f127-2379" hidden="false" type="rule" targetId="e74d-09c0-8669-dbfa"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="7461-f70a-5205-fe07" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="7e5d-e378-08e1-e946">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c918-96c1-1ff1-3df1" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and"/>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="915b-6b49-dbe2-78ee" field="category" scope="parent"/>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="57e7-ba49-ec6a-1fea" includeChildSelections="false" negative="false" automatic="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="7e5d-e378-08e1-e946" includeChildSelections="false" automatic="true"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Chapter Chaplain" hidden="false" id="81e5-498e-ee8c-e348" publicationId="e1e7-bf54-15e0-5ded" page="28" sortIndex="2">
       <categoryLinks>
@@ -822,6 +862,44 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="452e-cc5d-fe8e-d4df-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Deathwing" hidden="true" id="7ced-4afa-2fdd-a038" sortIndex="4">
+          <costs>
+            <cost name="Points" typeId="4deb-313d-6685-f48b" value="5"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Stubborn" id="6451-e6fa-ae51-21dd" hidden="false" type="rule" targetId="e74d-09c0-8669-dbfa"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="7461-f70a-5205-fe07" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="703c-308c-76d6-c49d">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c918-96c1-1ff1-3df1" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and"/>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="915b-6b49-dbe2-78ee" field="category" scope="parent"/>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f46a-9c3a-36ff-f7e2" includeChildSelections="false" negative="false" automatic="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="703c-308c-76d6-c49d" includeChildSelections="false" automatic="true"/>
+          </constraints>
+        </selectionEntry>
       </selectionEntries>
       <infoLinks>
         <infoLink name="Litanies of Hate" id="0908-e0fb-b902-ec5a" hidden="false" type="rule" targetId="99d7-eaaa-fb97-4d39"/>
@@ -836,6 +914,23 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1202-16ac-4bf1-c237" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="dfad-a748-913f-6a1f" shared="true"/>
               </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="81e5-498e-ee8c-e348" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1202-16ac-4bf1-c237" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="dfad-a748-913f-6a1f" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -911,9 +1006,30 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="aa3b-b41f-8457-c12f" shared="true" includeChildSelections="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="aa3b-b41f-8457-c12f" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d2fd-1e19-346c-e5f5" shared="true" includeChildSelections="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="011c-ecc1-7b26-e702" shared="true" includeChildSelections="false"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="cd2f-5665-5521-8396" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1202-16ac-4bf1-c237" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="dfad-a748-913f-6a1f" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="remove" value="0d45-9523-cfd8-4efd" field="category">
           <conditionGroups>
@@ -929,6 +1045,46 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
       <infoLinks>
         <infoLink name="And They Shall Know No Fear" id="9f76-1d46-a7c7-a631" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Deathwing" hidden="true" id="b0d1-8ff7-23ee-84cc" sortIndex="5">
+          <costs>
+            <cost name="Points" typeId="4deb-313d-6685-f48b" value="5"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Stubborn" id="9761-da55-b4d6-2826" hidden="false" type="rule" targetId="e74d-09c0-8669-dbfa"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="7461-f70a-5205-fe07" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="d81e-db1d-4857-248d">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c918-96c1-1ff1-3df1" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and"/>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="915b-6b49-dbe2-78ee" field="category" scope="parent"/>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39a2-e78f-73f3-945e" includeChildSelections="false" negative="false" automatic="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d81e-db1d-4857-248d" includeChildSelections="false" automatic="true"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Command Squad" hidden="false" id="1202-16ac-4bf1-c237" sortIndex="4">
       <selectionEntryGroups>
@@ -1281,18 +1437,6 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3661-76a3-d169-41d1" includeChildSelections="false"/>
           </constraints>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="a7a5-941a-a077-ef22" childId="cd2f-5665-5521-8396" shared="true" includeChildSelections="false"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d2fd-1e19-346c-e5f5" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <costs>
             <cost name="Points" typeId="4deb-313d-6685-f48b" value="100"/>
           </costs>
@@ -1375,6 +1519,7 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="a10d-d7dd-4f63-b6a0" shared="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="f063-218d-bd6a-215f" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="e39c-0852-74f1-402d" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1409,6 +1554,17 @@ Librarians and Chaplains may be attached to another character&apos;s Command Squ
 A character who is leading or attached to a squad does not stop being an Independent Character for the purposes of close combat.</description>
         </rule>
       </rules>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="9862-c761-5bd2-ffc7" field="category" affects="self.entries.unit"/>
+            <modifier type="add" value="915b-6b49-dbe2-78ee" field="category" affects="entries.unit"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Scout" hidden="false" id="acfa-0aee-582c-a411">
       <infoLinks>
@@ -1505,6 +1661,7 @@ In NewRecruit these bonuses should be automatically applied to a unit&apos;s pro
             <conditionGroup type="and">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="264d-81f0-01d1-4274" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1513,8 +1670,8 @@ In NewRecruit these bonuses should be automatically applied to a unit&apos;s pro
         <modifier type="increment" value="1" field="4.123232344415441e+21" affects="profiles.Unit" scope="parent"/>
       </modifiers>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9949-c3ef-4c32-1d6d" includeChildSelections="false"/>
-        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="7b4d-2429-970f-cba3"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9949-c3ef-4c32-1d6d" includeChildSelections="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="7b4d-2429-970f-cba3" automatic="true"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Jump Pack" hidden="false" id="ad18-c21b-2a52-ef86">
@@ -2204,10 +2361,17 @@ Drop pods may be used in Standard Missions without your opponent&apos;s agreemen
       <modifiers>
         <modifier type="set" value="false" field="hidden">
           <conditionGroups>
-            <conditionGroup type="and">
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="a10d-d7dd-4f63-b6a0" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="e39c-0852-74f1-402d" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="a10d-d7dd-4f63-b6a0" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="e39c-0852-74f1-402d" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5d6a-882d-b48c-1bcb" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2237,9 +2401,9 @@ Drop pods may be used in Standard Missions without your opponent&apos;s agreemen
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="add" value="9862-c761-5bd2-ffc7" field="category"/>
+            <modifier type="add" value="9862-c761-5bd2-ffc7" field="category" affects="self.entries.unit"/>
             <modifier type="increment" value="5" field="4deb-313d-6685-f48b" affects="self.entries.model" scope="parent"/>
-            <modifier type="add" value="9862-c761-5bd2-ffc7" field="category"/>
+            <modifier type="add" value="915b-6b49-dbe2-78ee" field="category" affects="self.entries.unit"/>
           </modifiers>
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
@@ -3165,6 +3329,97 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <cost name="Points" typeId="4deb-313d-6685-f48b" value="25"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sword of Secrets" hidden="true" id="d5a6-316e-fdc4-b81c">
+      <costs>
+        <cost name="Points" typeId="4deb-313d-6685-f48b" value="40"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9a66-b0e3-9de5-db79" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="a10d-d7dd-4f63-b6a0" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="8677-9e63-6b54-9a46" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Sword of Secrets" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="5247-abbc-6b90-f744">
+          <characteristics>
+            <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">The Sword of Secrets is a Power Weapon that allows its wielder to strike as if they had Strength 6 in close combat.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="The Lion Helm" hidden="true" id="16a3-b6bd-23d3-02a9">
+      <costs>
+        <cost name="Points" typeId="4deb-313d-6685-f48b" value="35"/>
+      </costs>
+      <profiles>
+        <profile name="The Lion Helm" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="a1f4-df2b-6c7c-af6c">
+          <characteristics>
+            <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">The Lion Helm is carried by a Helmet Bearer. It stays within 2&quot; of the character with the Lion Helm. It can not attack or be attacked.
+The Lion Helm projects a force field  that provides any model (friend or foe) within 3&quot; of the Helmet Bearer with a 4+ Invulnerable save against any shooting attacks.
+The effect of the Lion Helm does not extend to vehicles.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9a66-b0e3-9de5-db79" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dark Angels Army Specialization" hidden="false" id="3522-d9d2-3eef-2d2d">
+      <categoryLinks>
+        <categoryLink name="Force Customization" hidden="false" id="eeac-8ae8-a188-5d00" targetId="7466-cf81-3a11-64ab" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Specialization" id="a0da-527b-3c9f-af10" hidden="false" flatten="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Deathwing Army" hidden="false" id="046a-33e8-8222-3cd4">
+              <categoryLinks>
+                <categoryLink name="Force Customization" hidden="false" id="1586-b088-664c-eb21" targetId="7466-cf81-3a11-64ab" primary="true"/>
+              </categoryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="76a1-24e2-978e-e4f2" includeChildSelections="false" automatic="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ravenwing Army" hidden="false" id="213a-8bf1-e310-6baa">
+              <categoryLinks>
+                <categoryLink name="Force Customization" hidden="false" id="b7d1-2503-0b02-d4fa" targetId="7466-cf81-3a11-64ab" primary="true"/>
+              </categoryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="305e-d070-2599-c1a3" includeChildSelections="false" automatic="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3439-25ca-b6b8-6ad5" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="905d-df47-99f1-cbd3-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="905d-df47-99f1-cbd3-max" includeChildSelections="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="Army Specialization" field="name"/>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
     <selectionEntry type="unit" import="true" name="Tactical Squad" hidden="false" id="16bd-1997-ce61-f3ce" publicationId="e1e7-bf54-15e0-5ded" page="34" sortIndex="11">
@@ -3433,6 +3688,13 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
           <costs>
             <cost name="Points" typeId="4deb-313d-6685-f48b" value="13"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="97a4-2744-2cf2-8f2f" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </entryLink>
         <entryLink import="true" name="Frag Grenades" hidden="false" id="3294-edd9-8ebb-890e" type="selectionEntry" targetId="2d20-fb36-3564-0dbe">
           <costs>
@@ -5194,10 +5456,19 @@ If you select a named chapter from above and choose to use codex divergent trait
             <conditionGroup type="and">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="556a-9cc5-d33b-22a9" shared="true" includeChildSelections="true"/>
-                <condition type="atLeast" value="1500" field="4deb-313d-6685-f48b" scope="force" childId="any" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" value="1" field="9238-3491-9cda-3e1c">
+          <conditions>
+            <condition type="atLeast" value="1500" field="4deb-313d-6685-f48b" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="May only be taken in a force of at least 1500 points" field="error">
+          <conditions>
+            <condition type="lessThan" value="1500" field="4deb-313d-6685-f48b" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <entryLinks>
@@ -5346,7 +5617,7 @@ If you select a named chapter from above and choose to use codex divergent trait
         <infoLink name="And They Shall Know No Fear" id="4261-4596-e25b-c766" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
       </infoLinks>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1cc7-0f81-4f56-e95b" includeChildSelections="true" includeChildForces="true" automatic="true"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="9238-3491-9cda-3e1c" includeChildSelections="true" includeChildForces="true" automatic="true"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Tyrannic War Veterans" hidden="true" id="d438-1078-bc67-68b4">
@@ -5591,7 +5862,11 @@ If you select a named chapter from above and choose to use codex divergent trait
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0f82-4d20-6272-997d-max" includeChildSelections="false"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Storm Bolter" id="6122-1e34-b30a-126a" hidden="false" type="profile" targetId="d5e9-6e7d-416d-6b6a"/>
+            <infoLink name="Storm Bolter" id="6122-1e34-b30a-126a" hidden="false" type="profile" targetId="d5e9-6e7d-416d-6b6a">
+              <modifiers>
+                <modifier type="set" value="Gauntlets of Ultramar (Storm Bolter)" field="name"/>
+              </modifiers>
+            </infoLink>
             <infoLink name="Power Fist" id="8430-cd37-2c6e-6a02" hidden="false" type="profile" targetId="180c-c683-5834-19cc"/>
           </infoLinks>
           <profiles>
@@ -5607,12 +5882,21 @@ If you select a named chapter from above and choose to use codex divergent trait
         <modifier type="set" value="false" field="hidden">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="b930-ebc4-b1eb-0a58" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1" field="9a7d-054a-bc53-be0e">
+          <conditions>
             <condition type="atLeast" value="1500" field="4deb-313d-6685-f48b" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="May only be taken in a force of at least 1500 points" field="error">
+          <conditions>
+            <condition type="lessThan" value="1500" field="4deb-313d-6685-f48b" scope="force" childId="any" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2070-1e06-34f6-0602" includeChildSelections="true" includeChildForces="true" automatic="true"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="9a7d-054a-bc53-be0e" includeChildSelections="true" includeChildForces="true" automatic="true"/>
       </constraints>
       <infoLinks>
         <infoLink name="And They Shall Know No Fear" id="b53f-61c3-287e-bab9" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
@@ -5627,13 +5911,22 @@ If you select a named chapter from above and choose to use codex divergent trait
         <categoryLink name="Character" hidden="false" id="5272-3075-22d3-8f9d" targetId="c918-96c1-1ff1-3df1" primary="false"/>
       </categoryLinks>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ad24-39f0-ddf3-7cf1" includeChildSelections="true" includeChildForces="true" automatic="true"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="ad24-39f0-ddf3-7cf1" includeChildSelections="true" includeChildForces="true" automatic="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="c9d5-f7d6-67ae-5de6" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1" field="ad24-39f0-ddf3-7cf1">
+          <conditions>
             <condition type="atLeast" value="1500" field="4deb-313d-6685-f48b" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="May only be taken in a force of at least 1500 points" field="error">
+          <conditions>
+            <condition type="lessThan" value="1500" field="4deb-313d-6685-f48b" scope="force" childId="any" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5794,12 +6087,21 @@ If you select a named chapter from above and choose to use codex divergent trait
         <modifier type="set" value="false" field="hidden">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="b930-ebc4-b1eb-0a58" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1" field="c99f-b068-f5fc-c6e0">
+          <conditions>
             <condition type="atLeast" value="1500" field="4deb-313d-6685-f48b" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="May only be taken in a force of at least 1500 points" field="error">
+          <conditions>
+            <condition type="lessThan" value="1500" field="4deb-313d-6685-f48b" scope="force" childId="any" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f384-9c18-b72d-ea87" includeChildSelections="true" includeChildForces="true" automatic="true"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="c99f-b068-f5fc-c6e0" includeChildSelections="true" includeChildForces="true" automatic="true"/>
       </constraints>
       <rules>
         <rule name="Tyranid Hunter" id="04a0-656b-a23a-c779" hidden="false">
@@ -5867,12 +6169,21 @@ If you select a named chapter from above and choose to use codex divergent trait
         <modifier type="set" value="false" field="hidden">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="b930-ebc4-b1eb-0a58" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1" field="d9fe-7712-8cb8-5dec">
+          <conditions>
             <condition type="atLeast" value="1500" field="4deb-313d-6685-f48b" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="May only be taken in a force of at least 1500 points" field="error">
+          <conditions>
+            <condition type="lessThan" value="1500" field="4deb-313d-6685-f48b" scope="force" childId="any" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a8cd-3163-27cf-95ca" includeChildSelections="true" includeChildForces="true" automatic="true"/>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="d9fe-7712-8cb8-5dec" includeChildSelections="true" includeChildForces="true" automatic="true"/>
       </constraints>
       <profiles>
         <profile name="Tigurius, Chief Librarian" typeId="556e697423232344415441232323" typeName="Unit" hidden="false" id="3cc4-86e1-5e90-889d">
@@ -5951,6 +6262,7 @@ If you select a named chapter from above and choose to use codex divergent trait
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1507-f6be-3680-5e10" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="306d-a124-7618-8d4f" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="4147-17d1-1cda-a597" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="da0f-af82-52b0-763e" shared="true" includeChildSelections="true"/>
                       </conditions>
                       <conditionGroups>
                         <conditionGroup type="and">
@@ -6006,6 +6318,7 @@ If you select a named chapter from above and choose to use codex divergent trait
                     <conditionGroup type="or">
                       <conditions>
                         <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="c918-96c1-1ff1-3df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="264d-81f0-01d1-4274" shared="true"/>
                       </conditions>
                       <conditionGroups>
                         <conditionGroup type="and">
@@ -6072,6 +6385,7 @@ If you select a named chapter from above and choose to use codex divergent trait
                             <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1507-f6be-3680-5e10" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="306d-a124-7618-8d4f" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6673-fdad-40ba-79a1" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="264d-81f0-01d1-4274" shared="true"/>
                           </conditions>
                         </conditionGroup>
                         <conditionGroup type="and">
@@ -6096,9 +6410,14 @@ If you select a named chapter from above and choose to use codex divergent trait
                   </conditionGroups>
                 </modifier>
                 <modifier type="set" value="1" field="1247-f83a-dc92-b07f">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="264d-81f0-01d1-4274" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <costs>
@@ -6124,6 +6443,7 @@ If you select a named chapter from above and choose to use codex divergent trait
             </entryLink>
             <entryLink import="true" name="Auspex" hidden="false" id="cf32-e44d-15bb-e5d6" type="selectionEntry" targetId="654e-4eb2-8af2-248b"/>
             <entryLink import="true" name="Bionics" hidden="false" id="f9df-8c19-cd83-9af2" type="selectionEntry" targetId="566d-c785-7272-4aeb"/>
+            <entryLink import="true" name="Sword of Secrets" hidden="false" id="f6e3-ad74-1fac-6dd8" type="selectionEntry" targetId="d5a6-316e-fdc4-b81c"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Familiar" hidden="false" id="0002-6fa1-2d05-0d72">
@@ -6232,27 +6552,6 @@ If you select a named chapter from above and choose to use codex divergent trait
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e1bc-2eb6-9e25-ace9" includeChildSelections="false"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Sword of Secrets" hidden="true" id="d5a6-316e-fdc4-b81c">
-              <costs>
-                <cost name="Points" typeId="4deb-313d-6685-f48b" value="40"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9a66-b0e3-9de5-db79" shared="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="a10d-d7dd-4f63-b6a0" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="8677-9e63-6b54-9a46" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Blades of Reason" hidden="true" id="1f1e-af24-cfb9-cfe3">
               <costs>
                 <cost name="Points" typeId="4deb-313d-6685-f48b" value="5"/>
@@ -6260,18 +6559,25 @@ If you select a named chapter from above and choose to use codex divergent trait
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
                   <conditionGroups>
-                    <conditionGroup type="and">
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="81e5-498e-ee8c-e348" shared="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="parent" childId="a10d-d7dd-4f63-b6a0" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="81e5-498e-ee8c-e348" shared="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="a10d-d7dd-4f63-b6a0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="751d-4b97-40c1-8fc4" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ea75-c1ab-47e4-1c6c" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ea75-c1ab-47e4-1c6c" includeChildSelections="true" automatic="true"/>
               </constraints>
               <profiles>
                 <profile name="Blades of Reason" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="e8b5-0847-cd5c-559c">
@@ -6520,32 +6826,6 @@ If you select a named chapter from above and choose to use codex divergent trait
                     </modifier>
                   </modifiers>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="The Lion Helm" hidden="true" id="16a3-b6bd-23d3-02a9">
-                  <costs>
-                    <cost name="Points" typeId="4deb-313d-6685-f48b" value="35"/>
-                  </costs>
-                  <profiles>
-                    <profile name="The Lion Helm" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="a1f4-df2b-6c7c-af6c">
-                      <characteristics>
-                        <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">The Lion Helm is carried by a Helmet Bearer. It stays within 2&quot; of the character with the Lion Helm. It can not attack or be attacked.
-The Lion Helm projects a force field  that provides any model (friend or foe) within 3&quot; of the Helmet Bearer with a 4+ Invulnerable save against any shooting attacks.
-The effect of the Lion Helm does not extend to vehicles.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <modifiers>
-                    <modifier type="set" value="false" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9a66-b0e3-9de5-db79" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Book of Salvation" hidden="true" id="7fcd-63c3-4169-b9db">
                   <costs>
                     <cost name="Points" typeId="4deb-313d-6685-f48b" value="40"/>
@@ -6553,10 +6833,17 @@ The effect of the Lion Helm does not extend to vehicles.</characteristic>
                   <modifiers>
                     <modifier type="set" value="false" field="hidden">
                       <conditionGroups>
-                        <conditionGroup type="and">
+                        <conditionGroup type="or">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
+                                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="cd2f-5665-5521-8396" shared="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
                           <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9862-c761-5bd2-ffc7" shared="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="cd2f-5665-5521-8396" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="011c-ecc1-7b26-e702" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -6687,11 +6974,21 @@ The effect of the Lion Helm does not extend to vehicles.</characteristic>
                   </conditions>
                 </modifier>
               </modifiers>
+              <entryLinks>
+                <entryLink import="true" name="The Lion Helm" hidden="false" id="dafd-60bb-b4bc-b887" type="selectionEntry" targetId="16a3-b6bd-23d3-02a9"/>
+              </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
             <constraint type="max" value="100" field="4deb-313d-6685-f48b" scope="parent" shared="true" id="df86-f6ed-e1f0-0263" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="65" field="df86-f6ed-e1f0-0263">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="264d-81f0-01d1-4274" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Weapons" id="e948-70b3-ca84-b0b8" hidden="false" sortIndex="1">
           <selectionEntryGroups>
@@ -7915,178 +8212,194 @@ The effect of the Lion Helm does not extend to vehicles.</characteristic>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Psychic Powers" id="adde-b091-49fb-9791" hidden="false" defaultSelectionEntryId="deac-1756-e112-bc43">
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Storm of the Emperor&apos;s Wrath" hidden="false" id="deac-1756-e112-bc43" sortIndex="1">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1fbf-cb38-0082-a50b" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Storm of the Emperor&apos;s Wrath" typeId="9c33-b0c8-74bd-e5a7" typeName="Psychic Power (Attack)" hidden="false" id="55dc-5993-a426-a130">
-              <characteristics>
-                <characteristic name="Range" typeId="5bf6-378a-0cb7-b079">12&quot;</characteristic>
-                <characteristic name="Strength" typeId="12da-9b3e-f37b-bc35">4</characteristic>
-                <characteristic name="AP" typeId="10b5-aa5b-ccde-79cc">2</characteristic>
-                <characteristic name="Type" typeId="20e7-cbcb-1781-a732">Assault 1, Blast</characteristic>
-                <characteristic name="Details" typeId="a812-390d-dff6-dabd">This psychic power is used in the Shooting phase instead of firing a weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Fury of the Ancients" hidden="false" id="c672-6a62-b00d-52de" sortIndex="2">
-          <costs>
-            <cost name="Points" typeId="4deb-313d-6685-f48b" value="3"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="9" field="4deb-313d-6685-f48b">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="b99b-4e21-6176-f480" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="0" field="4deb-313d-6685-f48b">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d2fd-1e19-346c-e5f5" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70e1-9b0d-0eec-55a5" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Fury of the Ancients" typeId="ae70-4738-0161-bec0" typeName="Psychic Power" hidden="false" id="fc40-2a61-43e9-d2a4">
-              <characteristics>
-                <characteristic name="Details" typeId="ad96-dfa4-b4ed-656d">This psychic power is used in the Shooting phase instead of firing a weapon. The Librarian summons a psychic construct that moves in a straight line from the Librarian to any point on any table edge. Every unit in its path will suffer D3 Strength 5, AP - hits and must take a Pinning test. If the construct would hit a friendly unit or a unit Locked in close combat it will dissipate just before impact and has no further effect.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Fear of the Darkness" hidden="false" id="b8c9-abcf-e406-1379" sortIndex="3">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2595-ea6d-17ec-29ba" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Fear of the Darkness" typeId="ae70-4738-0161-bec0" typeName="Psychic Power" hidden="false" id="7059-46fd-8df6-e4ae">
-              <characteristics>
-                <characteristic name="Details" typeId="ad96-dfa4-b4ed-656d">This psychic power is used in the Shooting phase instead of firing a weapon. Every enemy unit within 12&quot; of the Librarian not Locked in close combat must take a Morale check (as though they had taken 25% casualties) with a -2 modifier to their Leadership, or fall back. All normal conditions and/or exceptions apply (ie, units that never fall back are immune to this power).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="Points" typeId="4deb-313d-6685-f48b" value="5"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="15" field="4deb-313d-6685-f48b">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="b99b-4e21-6176-f480" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="0" field="4deb-313d-6685-f48b">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d2fd-1e19-346c-e5f5" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Might of Heroes" hidden="false" id="0ee6-ac3e-31e9-7eef" sortIndex="4">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d8a-d656-5347-3a41" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Might of Heroes" typeId="ae70-4738-0161-bec0" typeName="Psychic Power" hidden="false" id="6489-2845-476f-2fb2">
-              <characteristics>
-                <characteristic name="Details" typeId="ad96-dfa4-b4ed-656d">This psychic power is used at the start of either player&apos;s Assault phase. The Librarian (or one model in the same unit as the Librarian) gains D3+ attacks in that Assault phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="Points" typeId="4deb-313d-6685-f48b" value="5"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="15" field="4deb-313d-6685-f48b">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="b99b-4e21-6176-f480" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="0" field="4deb-313d-6685-f48b">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d2fd-1e19-346c-e5f5" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Veil of Time" hidden="false" id="d72c-84df-c6d7-85bd" sortIndex="5">
-          <costs>
-            <cost name="Points" typeId="4deb-313d-6685-f48b" value="10"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="30" field="4deb-313d-6685-f48b">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="b99b-4e21-6176-f480" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="0" field="4deb-313d-6685-f48b">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d2fd-1e19-346c-e5f5" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile name="Veil of Time" typeId="ae70-4738-0161-bec0" typeName="Psychic Power" hidden="false" id="2a92-268b-79ce-d131">
-              <characteristics>
-                <characteristic name="Details" typeId="ad96-dfa4-b4ed-656d">This psychic power is used at the start of the Movement phase and lasts until the end of the Space Marine turn. In that time the Librarian can choose to re-roll any rolls to hit, rolls to wound, Armour Saves, Invulnerable Saves, Leadership tests or Morale checks. Note that the re-rolled result must be accepted.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d6e-0c54-fdef-92d9" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Vortex of Doom" hidden="false" id="f872-d11e-083b-d9ee" sortIndex="6">
-          <costs>
-            <cost name="Points" typeId="4deb-313d-6685-f48b" value="10"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="30" field="4deb-313d-6685-f48b">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="b99b-4e21-6176-f480" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="0" field="4deb-313d-6685-f48b">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d2fd-1e19-346c-e5f5" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile name="Vortex of Doom" typeId="ae70-4738-0161-bec0" typeName="Psychic Power" hidden="false" id="1da1-7add-42e3-afb5">
-              <characteristics>
-                <characteristic name="Details" typeId="ad96-dfa4-b4ed-656d">This psychic power is used in the Shooting phase instead of firing a weapon. Place a small Blast marker over any enemy unit not Locked in combat within 12&quot; of the Librarian. Once you have placed the Blast marker, roll the Scatter dice - on a Hit, a rift opens beneath the Blast marker, otherwise move the Blast marker D6&quot; in the direction of the arrow. This power has no effect on vehicles or monstrous creatures, as they are too large to be pulled into the Warp rift. Enemy models fully covered by the marker must roll equal or under their Initiative characteristic on a D6 or they will be sucked into the depths of the Warp and destroyed instantly, without recourse to a Saving throw of any kind. Note that a roll of 6 is always a failure, regardless of the target&apos;s Initiative characteristic. Models only partially beneath the marker will only be affected on a D6 roll of 4+.
-
-
-If when using this power the Librarian rolls a 12 on his Psychic test, resolve the Peris of the Warp attack on the Librarian normally, then, if he survives, place the Vortex of Doom Blast marker on the Librarian and then resolve the effects of the power.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ee47-d2df-ba41-82cc" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b9b0-f180-b9b0-c9b6" includeChildSelections="false" automatic="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b9b0-f180-b9b0-c9b6" includeChildSelections="false" automatic="true"/>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3b31-385a-edfa-d297" automatic="false"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="2" field="b9b0-f180-b9b0-c9b6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="b99b-4e21-6176-f480" shared="true" includeChildSelections="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d2fd-1e19-346c-e5f5" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition type="equalTo" value="0" field="selections" scope="parent" childId="0e38-7a66-efc1-2f2d" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Additional Power" id="8510-275b-e6a0-36dc" hidden="true" collapsible="true" sortIndex="2">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="0e38-7a66-efc1-2f2d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Fury of the Ancients" hidden="false" id="b279-d00b-d20c-381e" type="selectionEntry" targetId="c672-6a62-b00d-52de" sortIndex="2">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="9"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Fear of the Darkness" hidden="false" id="a8f4-c953-5978-67da" type="selectionEntry" targetId="b8c9-abcf-e406-1379" sortIndex="3">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="15"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Might of Heroes" hidden="false" id="780e-e6e4-fb07-8c93" type="selectionEntry" targetId="0ee6-ac3e-31e9-7eef" sortIndex="4">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="15"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Veil of Time" hidden="false" id="06e5-ff8e-399f-8ab7" type="selectionEntry" targetId="d72c-84df-c6d7-85bd" sortIndex="5">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="30"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Vortex of Doom" hidden="false" id="1622-e656-16f2-adb7" type="selectionEntry" targetId="f872-d11e-083b-d9ee" sortIndex="6">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="30"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="781a-2b62-8fed-6628" includeChildSelections="false" automatic="true"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Initial Power" id="7840-b91d-8be6-0e12" hidden="false" flatten="true" sortIndex="1" defaultSelectionEntryId="deac-1756-e112-bc43">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Storm of the Emperor&apos;s Wrath" hidden="false" id="deac-1756-e112-bc43" sortIndex="1" defaultAmount="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1fbf-cb38-0082-a50b" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Storm of the Emperor&apos;s Wrath" typeId="9c33-b0c8-74bd-e5a7" typeName="Psychic Power (Attack)" hidden="false" id="55dc-5993-a426-a130">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5bf6-378a-0cb7-b079">12&quot;</characteristic>
+                    <characteristic name="Strength" typeId="12da-9b3e-f37b-bc35">4</characteristic>
+                    <characteristic name="AP" typeId="10b5-aa5b-ccde-79cc">2</characteristic>
+                    <characteristic name="Type" typeId="20e7-cbcb-1781-a732">Assault 1, Blast</characteristic>
+                    <characteristic name="Details" typeId="a812-390d-dff6-dabd">This psychic power is used in the Shooting phase instead of firing a weapon.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fury of the Ancients" hidden="false" id="c672-6a62-b00d-52de" sortIndex="2">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="3"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="0" field="4deb-313d-6685-f48b">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d2fd-1e19-346c-e5f5" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70e1-9b0d-0eec-55a5" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Fury of the Ancients" typeId="ae70-4738-0161-bec0" typeName="Psychic Power" hidden="false" id="fc40-2a61-43e9-d2a4">
+                  <characteristics>
+                    <characteristic name="Details" typeId="ad96-dfa4-b4ed-656d">This psychic power is used in the Shooting phase instead of firing a weapon. The Librarian summons a psychic construct that moves in a straight line from the Librarian to any point on any table edge. Every unit in its path will suffer D3 Strength 5, AP - hits and must take a Pinning test. If the construct would hit a friendly unit or a unit Locked in close combat it will dissipate just before impact and has no further effect.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fear of the Darkness" hidden="false" id="b8c9-abcf-e406-1379" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2595-ea6d-17ec-29ba" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Fear of the Darkness" typeId="ae70-4738-0161-bec0" typeName="Psychic Power" hidden="false" id="7059-46fd-8df6-e4ae">
+                  <characteristics>
+                    <characteristic name="Details" typeId="ad96-dfa4-b4ed-656d">This psychic power is used in the Shooting phase instead of firing a weapon. Every enemy unit within 12&quot; of the Librarian not Locked in close combat must take a Morale check (as though they had taken 25% casualties) with a -2 modifier to their Leadership, or fall back. All normal conditions and/or exceptions apply (ie, units that never fall back are immune to this power).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="5"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="0" field="4deb-313d-6685-f48b">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d2fd-1e19-346c-e5f5" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Might of Heroes" hidden="false" id="0ee6-ac3e-31e9-7eef" sortIndex="4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d8a-d656-5347-3a41" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Might of Heroes" typeId="ae70-4738-0161-bec0" typeName="Psychic Power" hidden="false" id="6489-2845-476f-2fb2">
+                  <characteristics>
+                    <characteristic name="Details" typeId="ad96-dfa4-b4ed-656d">This psychic power is used at the start of either player&apos;s Assault phase. The Librarian (or one model in the same unit as the Librarian) gains D3+ attacks in that Assault phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="5"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="0" field="4deb-313d-6685-f48b">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d2fd-1e19-346c-e5f5" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veil of Time" hidden="false" id="d72c-84df-c6d7-85bd" sortIndex="5">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="10"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="0" field="4deb-313d-6685-f48b">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d2fd-1e19-346c-e5f5" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Veil of Time" typeId="ae70-4738-0161-bec0" typeName="Psychic Power" hidden="false" id="2a92-268b-79ce-d131">
+                  <characteristics>
+                    <characteristic name="Details" typeId="ad96-dfa4-b4ed-656d">This psychic power is used at the start of the Movement phase and lasts until the end of the Space Marine turn. In that time the Librarian can choose to re-roll any rolls to hit, rolls to wound, Armour Saves, Invulnerable Saves, Leadership tests or Morale checks. Note that the re-rolled result must be accepted.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d6e-0c54-fdef-92d9" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Vortex of Doom" hidden="false" id="f872-d11e-083b-d9ee" sortIndex="6">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="10"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="0" field="4deb-313d-6685-f48b">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d2fd-1e19-346c-e5f5" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Vortex of Doom" typeId="ae70-4738-0161-bec0" typeName="Psychic Power" hidden="false" id="1da1-7add-42e3-afb5">
+                  <characteristics>
+                    <characteristic name="Details" typeId="ad96-dfa4-b4ed-656d">This psychic power is used in the Shooting phase instead of firing a weapon. Place a small Blast marker over any enemy unit not Locked in combat within 12&quot; of the Librarian. Once you have placed the Blast marker, roll the Scatter dice - on a Hit, a rift opens beneath the Blast marker, otherwise move the Blast marker D6&quot; in the direction of the arrow. This power has no effect on vehicles or monstrous creatures, as they are too large to be pulled into the Warp rift. Enemy models fully covered by the marker must roll equal or under their Initiative characteristic on a D6 or they will be sucked into the depths of the Warp and destroyed instantly, without recourse to a Saving throw of any kind. Note that a roll of 6 is always a failure, regardless of the target&apos;s Initiative characteristic. Models only partially beneath the marker will only be affected on a D6 roll of 4+.
+
+
+If when using this power the Librarian rolls a 12 on his Psychic test, resolve the Peris of the Warp attack on the Librarian normally, then, if he survives, place the Vortex of Doom Blast marker on the Librarian and then resolve the effects of the power.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ee47-d2df-ba41-82cc" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a9c6-5729-55bf-4e38" includeChildSelections="false" automatic="true"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <entryLinks>
