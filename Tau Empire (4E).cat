@@ -1546,6 +1546,9 @@
       <infoLinks>
         <infoLink name="Night Vision/Acute Senses" id="65b8-e89c-e23f-81d5" hidden="false" type="rule" targetId="7113-3723-c835-726b"/>
       </infoLinks>
+      <costs>
+        <cost name="Points" typeId="4deb-313d-6685-f48b" value="175"/>
+      </costs>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Fire Warrior Team" hidden="false" id="7236-993d-fa4b-d6b3">
       <categoryLinks>
