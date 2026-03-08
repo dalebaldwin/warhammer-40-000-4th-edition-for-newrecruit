@@ -152,7 +152,7 @@
     </entryLink>
     <entryLink import="true" name="Death Company" hidden="false" id="d7ce-cbda-0cad-7d24" type="selectionEntry" targetId="7205-9c16-857d-ba53" sortIndex="6">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a064-527a-94d9-01f6-min" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a064-527a-94d9-01f6-min" includeChildSelections="false" automatic="true"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a064-527a-94d9-01f6-max" includeChildSelections="false"/>
       </constraints>
     </entryLink>

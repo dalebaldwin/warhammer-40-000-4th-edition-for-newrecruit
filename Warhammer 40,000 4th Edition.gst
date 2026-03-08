@@ -55,15 +55,16 @@
         <infoLink name="Character" id="ef1a-f9b1-cc1d-691d" hidden="false" type="rule" targetId="ff9d-2579-a056-981b"/>
       </infoLinks>
     </categoryEntry>
-    <categoryEntry name="Death Company" id="0589-7c29-bfa2-d566" hidden="true">
+    <categoryEntry name="Death Company" id="0589-7c29-bfa2-d566" hidden="false">
       <modifiers>
         <modifier type="set" value="false" field="hidden">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="e39c-0852-74f1-402d" shared="true" includeChildSelections="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1456-5870-a9bd-3017" shared="true" includeChildSelections="false" includeChildForces="false"/>
           </conditions>
         </modifier>
       </modifiers>
     </categoryEntry>
+    <categoryEntry name="Blood Angel" id="4ed8-d7fb-205d-d46d" hidden="false"/>
   </categoryEntries>
   <publications>
     <publication name="Warhammer 40,000 4th Edition Rulebook" id="c0d3-c074-f54c-9ec4" hidden="false" shortName="BRB" publisher="Warhammer 40,000 4th Edition Rulebook" publicationDate="2004/08/28" publisherUrl="https://wh40k.lexicanum.com/wiki/Warhammer_40,000_4th_Edition_Rulebook"/>
@@ -242,16 +243,16 @@
     </profileType>
   </profileTypes>
   <forceEntries>
-    <forceEntry name="Standard Mission Force Organization Chart" id="916a-7942-cedc-170c" hidden="false" sortIndex="1" exportable="false">
+    <forceEntry name="Standard Mission Force Organization Chart" id="916a-7942-cedc-170c" hidden="false" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Force Customization" hidden="false" id="2536-580a-6798-ea9f" targetId="7466-cf81-3a11-64ab"/>
+        <categoryLink name="Death Company" hidden="false" id="127f-8dd1-cf9d-64c0" targetId="0589-7c29-bfa2-d566"/>
         <categoryLink name="HQ" hidden="false" id="7d81-9036-eb2e-ffe7" targetId="0d45-9523-cfd8-4efd">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1347-153d-c273-11b7" includeChildSelections="true"/>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="650c-a852-8d3e-4fcd" includeChildSelections="true"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Death Company" hidden="false" id="127f-8dd1-cf9d-64c0" targetId="0589-7c29-bfa2-d566"/>
         <categoryLink name="Elites" hidden="false" id="9adf-cce0-a1a7-22e2" targetId="39ab-2bcd-49d1-cfef">
           <constraints>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="72b8-d157-8702-12e5" includeChildSelections="true"/>
