@@ -194,7 +194,7 @@ Movement: Spore Mine Clusters drift D6&quot; in the direction rolled on a Scatte
                 <cost name="Points" typeId="4deb-313d-6685-f48b" value="4"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Scythed Talons" hidden="false" id="f453-9c83-b9e7-fa72" type="selectionEntry" targetId="6471-c007-8bbe-ff76">
+            <entryLink import="true" name="Scything Talons" hidden="false" id="f453-9c83-b9e7-fa72" type="selectionEntry" targetId="6471-c007-8bbe-ff76">
               <costs>
                 <cost name="Points" typeId="4deb-313d-6685-f48b" value="8"/>
               </costs>
@@ -1833,7 +1833,7 @@ Movement: Spore Mine Clusters drift D6&quot; in the direction rolled on a Scatte
                     <cost name="Points" typeId="4deb-313d-6685-f48b" value="20"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Synapse Creature" hidden="false" id="2465-f431-9ce8-daa5" type="selectionEntry" targetId="cd93-cf94-62a6-a851" sortIndex="">
+                <entryLink import="true" name="Synapse Creature" hidden="false" id="2465-f431-9ce8-daa5" type="selectionEntry" targetId="cd93-cf94-62a6-a851">
                   <costs>
                     <cost name="Points" typeId="4deb-313d-6685-f48b" value="10"/>
                   </costs>
@@ -2238,7 +2238,7 @@ Movement: Spore Mine Clusters drift D6&quot; in the direction rolled on a Scatte
             <characteristic name="I" typeId="4.923232344415441e+21">1</characteristic>
             <characteristic name="A" typeId="4.123232344415441e+21">2</characteristic>
             <characteristic name="LD" typeId="4c4423232344415441232323">10</characteristic>
-            <characteristic name="Sv" typeId="5.361766523232344e+27">2+</characteristic>
+            <characteristic name="Sv" typeId="5.361766523232344e+27">3+</characteristic>
           </characteristics>
         </profile>
       </profiles>
