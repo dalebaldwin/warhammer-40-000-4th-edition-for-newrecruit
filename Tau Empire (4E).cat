@@ -1326,6 +1326,9 @@
           <description>Should Aun&apos;Va be removed as a casualty, every Tau unit on the table (not Kroot, Vespids, or drones) must take a Morale check if they are not in close combat or falling back. Every unit that takes the test gains the Preferred Enemy universal special rule in relation to the enemy army, and in addition gains the Furious Charge universal special rule.</description>
         </rule>
       </rules>
+      <costs>
+        <cost name="Points" typeId="4deb-313d-6685-f48b" value="205"/>
+      </costs>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="O&apos;Shovah - Commander Farsight" hidden="false" id="8cd0-38ed-7b85-fde5">
       <categoryLinks>
