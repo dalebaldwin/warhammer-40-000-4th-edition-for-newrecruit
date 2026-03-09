@@ -42,6 +42,7 @@
       <categoryLinks>
         <categoryLink name="Dark Angel" hidden="false" id="f810-7460-395b-c814" targetId="9862-c761-5bd2-ffc7" primary="false"/>
         <categoryLink name="Deathwing" hidden="false" id="919a-9875-12bd-4c24" targetId="915b-6b49-dbe2-78ee" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="74fa-c3df-b2f3-265e" targetId="0d45-9523-cfd8-4efd" primary="true"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -55,6 +56,7 @@
       <categoryLinks>
         <categoryLink name="Dark Angel" hidden="false" id="585e-e193-13c2-b2f5" targetId="9862-c761-5bd2-ffc7" primary="false"/>
         <categoryLink name="Deathwing" hidden="false" id="52ab-dfa8-09c9-0f18" targetId="915b-6b49-dbe2-78ee" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="0955-93ca-bf85-237d" targetId="0d45-9523-cfd8-4efd" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Command Squad" hidden="false" id="acf0-eff0-5d00-1305" type="selectionEntry" targetId="1202-16ac-4bf1-c237" sortIndex="7"/>
@@ -76,6 +78,7 @@
       <categoryLinks>
         <categoryLink name="Dark Angel" hidden="false" id="8356-46ef-afd0-bf48" targetId="9862-c761-5bd2-ffc7" primary="false"/>
         <categoryLink name="Deathwing" hidden="false" id="0a6f-9941-5f2e-c68b" targetId="915b-6b49-dbe2-78ee" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="d9dc-f50d-3f68-89b1" targetId="0d45-9523-cfd8-4efd" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Command Squad" hidden="false" id="d2b8-3f32-b32e-b7d8" type="selectionEntry" targetId="1202-16ac-4bf1-c237" sortIndex="6"/>

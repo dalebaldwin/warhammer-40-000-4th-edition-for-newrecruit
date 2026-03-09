@@ -1,70 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <gameSystem id="sys-b41a-8226-286b-0dea" name="Warhammer 40,000 4th Edition" battleScribeVersion="2.03" revision="3" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" authorName="Kothra" publicationId="c0d3-c074-f54c-9ec4">
   <categoryEntries>
-    <categoryEntry name="HQ" id="0d45-9523-cfd8-4efd" hidden="false">
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb91-ab6e-1d22-7b9d" includeChildSelections="true"/>
-        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="74ba-68da-040c-9b9e" includeChildSelections="true"/>
-      </constraints>
-    </categoryEntry>
-    <categoryEntry name="Elites" id="39ab-2bcd-49d1-cfef" hidden="false">
-      <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="d518-1c27-da4e-764e" includeChildSelections="true"/>
-      </constraints>
-      <modifiers>
-        <modifier type="decrement" value="1" field="d518-1c27-da4e-764e">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="93eb-aee0-ad90-7026" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </categoryEntry>
-    <categoryEntry name="Troops" id="23e2-2a28-50f4-a3c1" hidden="false">
-      <constraints>
-        <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="64fe-3999-b9ed-7453" includeChildSelections="true"/>
-        <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="1511-9e96-1d39-3410" includeChildSelections="true"/>
-      </constraints>
-    </categoryEntry>
-    <categoryEntry name="Fast Attack" id="11cf-dc94-5c14-2c2a" hidden="false">
-      <constraints>
-        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="6b58-931d-0ea2-899a" includeChildSelections="true"/>
-      </constraints>
-      <modifiers>
-        <modifier type="decrement" value="1" field="6b58-931d-0ea2-899a">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="93eb-aee0-ad90-7026" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </categoryEntry>
-    <categoryEntry name="Heavy Support" id="6a52-1951-5b0c-024e" hidden="false">
-      <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="1690-5ebc-d328-e12a" includeChildSelections="true"/>
-      </constraints>
-      <modifiers>
-        <modifier type="decrement" value="1" field="1690-5ebc-d328-e12a">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="93eb-aee0-ad90-7026" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </categoryEntry>
+    <categoryEntry name="HQ" id="0d45-9523-cfd8-4efd" hidden="false"/>
+    <categoryEntry name="Elites" id="39ab-2bcd-49d1-cfef" hidden="false"/>
+    <categoryEntry name="Troops" id="23e2-2a28-50f4-a3c1" hidden="false"/>
+    <categoryEntry name="Fast Attack" id="11cf-dc94-5c14-2c2a" hidden="false"/>
+    <categoryEntry name="Heavy Support" id="6a52-1951-5b0c-024e" hidden="false"/>
     <categoryEntry name="Force Customization" id="7466-cf81-3a11-64ab" hidden="false"/>
     <categoryEntry name="Character" id="c918-96c1-1ff1-3df1" hidden="false">
       <infoLinks>
         <infoLink name="Character" id="ef1a-f9b1-cc1d-691d" hidden="false" type="rule" targetId="ff9d-2579-a056-981b"/>
       </infoLinks>
     </categoryEntry>
-    <categoryEntry name="Death Company" id="0589-7c29-bfa2-d566" hidden="false">
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1456-5870-a9bd-3017" shared="true" includeChildSelections="false" includeChildForces="false"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </categoryEntry>
-    <categoryEntry name="Blood Angel" id="4ed8-d7fb-205d-d46d" hidden="false"/>
+    <categoryEntry name="Death Company" id="0589-7c29-bfa2-d566" hidden="false"/>
+    <categoryEntry name="Blood Angel" id="e39c-0852-74f1-402d" hidden="false"/>
   </categoryEntries>
   <publications>
     <publication name="Warhammer 40,000 4th Edition Rulebook" id="c0d3-c074-f54c-9ec4" hidden="false" shortName="BRB" publisher="Warhammer 40,000 4th Edition Rulebook" publicationDate="2004/08/28" publisherUrl="https://wh40k.lexicanum.com/wiki/Warhammer_40,000_4th_Edition_Rulebook"/>
@@ -246,33 +195,79 @@
     <forceEntry name="Standard Mission Force Organization Chart" id="916a-7942-cedc-170c" hidden="false" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Force Customization" hidden="false" id="2536-580a-6798-ea9f" targetId="7466-cf81-3a11-64ab"/>
-        <categoryLink name="Death Company" hidden="false" id="127f-8dd1-cf9d-64c0" targetId="0589-7c29-bfa2-d566"/>
+        <categoryLink name="Death Company" hidden="false" id="127f-8dd1-cf9d-64c0" targetId="0589-7c29-bfa2-d566">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1456-5870-a9bd-3017" shared="true" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="e39c-0852-74f1-402d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </categoryLink>
         <categoryLink name="HQ" hidden="false" id="7d81-9036-eb2e-ffe7" targetId="0d45-9523-cfd8-4efd">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1347-153d-c273-11b7" includeChildSelections="true"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="650c-a852-8d3e-4fcd" includeChildSelections="true"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d15d-13be-9af4-458c" includeChildSelections="true"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="9ef5-4149-cac9-87bb" includeChildSelections="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="9ef5-4149-cac9-87bb">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="3d97-8e4b-f2f4-5ead" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="d15d-13be-9af4-458c">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="3d97-8e4b-f2f4-5ead" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Elites" hidden="false" id="9adf-cce0-a1a7-22e2" targetId="39ab-2bcd-49d1-cfef">
           <constraints>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="72b8-d157-8702-12e5" includeChildSelections="true"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="d518-1c27-da4e-764e" includeChildSelections="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="decrement" value="1" field="d518-1c27-da4e-764e">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="93eb-aee0-ad90-7026" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Troops" hidden="false" id="964c-b8a7-2a6a-26ad" targetId="23e2-2a28-50f4-a3c1">
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="0ff7-f914-db08-7993" includeChildSelections="true"/>
-            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="0130-dfba-7d20-acce" includeChildSelections="true"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="64fe-3999-b9ed-7453" includeChildSelections="true"/>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="1511-9e96-1d39-3410" includeChildSelections="true"/>
           </constraints>
         </categoryLink>
         <categoryLink name="Fast Attack" hidden="false" id="b275-7f49-e852-3b41" targetId="11cf-dc94-5c14-2c2a">
           <constraints>
-            <constraint type="max" value="3" field="selections" scope="force" shared="true" id="5346-b510-70e0-0e45" includeChildSelections="true"/>
+            <constraint type="max" value="3" field="selections" scope="force" shared="true" id="6b58-931d-0ea2-899a" includeChildSelections="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="decrement" value="1" field="6b58-931d-0ea2-899a">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="93eb-aee0-ad90-7026" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Heavy Support" hidden="false" id="877c-e72e-5cdb-5f3f" targetId="6a52-1951-5b0c-024e">
           <constraints>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="7961-6807-64dd-63ed" includeChildSelections="true"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="1690-5ebc-d328-e12a" includeChildSelections="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="decrement" value="1" field="1690-5ebc-d328-e12a">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="93eb-aee0-ad90-7026" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -526,7 +521,7 @@
         <characteristic name="Range" typeId="52616e676523232344415441232323">Unlimited</characteristic>
         <characteristic name="Strength" typeId="537472656e67746823232344415441232323">8</characteristic>
         <characteristic name="AP" typeId="4.1502323234441545e+23">3</characteristic>
-        <characteristic name="Type" typeId="8b10-045a-f593-605e">Heavy 1, One-use</characteristic>
+        <characteristic name="Type" typeId="8b10-045a-f593-605e">Heavy 1, One Shot</characteristic>
         <characteristic name="Info" typeId="33e9-27bd-77e4-401d"/>
       </characteristics>
     </profile>
@@ -911,6 +906,9 @@ When a Squadron is fired at, any hits are distributed evenly amongst the vehicle
 When engaged in close combat, enemy units must allocate their attacks between the members of a squadron as if each vehicle was a separate unit. Use the movement of individual vehicles to determine how hard they are to hit.</description>
       <alias>Vehicle Squadrons</alias>
     </rule>
+    <rule name="One Shot" id="e2de-8008-3908-c406" hidden="false">
+      <description>This weapon may only be used once per battle.</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Frag Grenades" hidden="false" id="2d20-fb36-3564-0dbe">
@@ -993,32 +991,6 @@ Against vehicles, frag grenades roll D6+4 for armour penetration.</characteristi
       <costs>
         <cost name="Points" typeId="4deb-313d-6685-f48b" value="10"/>
       </costs>
-      <entryLinks>
-        <entryLink import="true" name="Heavy Bolter" hidden="false" id="1b9c-36a1-b5cb-134f" type="selectionEntry" targetId="8303-6167-50de-5177">
-          <costs>
-            <cost name="Points" typeId="4deb-313d-6685-f48b" value="15"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a0d1-6d57-e835-f5e9" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
-        <entryLink import="true" name="Multi-melta" hidden="false" id="8d91-bbc8-6141-c3d2" type="selectionEntry" targetId="0e43-0f25-d320-8e55">
-          <costs>
-            <cost name="Points" typeId="4deb-313d-6685-f48b" value="25"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fa20-a11c-59cc-35e8" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
-        <entryLink import="true" name="Plasma Cannon" hidden="false" id="eb28-0152-c569-fa81" type="selectionEntry" targetId="dafc-5431-7eff-6557">
-          <costs>
-            <cost name="Points" typeId="4deb-313d-6685-f48b" value="35"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="c2ce-a87d-ff5b-ff3a" includeChildSelections="true"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <profiles>
         <profile name="Gun Servitor" typeId="556e697423232344415441232323" typeName="Unit" hidden="false" id="6df0-b3e8-a591-8c1c">
           <characteristics>
@@ -1035,6 +1007,40 @@ Against vehicles, frag grenades roll D6+4 for armour penetration.</characteristi
           </characteristics>
         </profile>
       </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapon" id="0250-45f1-de7b-3d7e" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="1b9c-36a1-b5cb-134f" type="selectionEntry" targetId="8303-6167-50de-5177">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a0d1-6d57-e835-f5e9" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Multi-melta" hidden="false" id="8d91-bbc8-6141-c3d2" type="selectionEntry" targetId="0e43-0f25-d320-8e55">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="25"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fa20-a11c-59cc-35e8" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Plasma Cannon" hidden="false" id="eb28-0152-c569-fa81" type="selectionEntry" targetId="dafc-5431-7eff-6557">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="35"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="c2ce-a87d-ff5b-ff3a" includeChildSelections="true"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9c93-d46e-1a14-6bd4-min" includeChildSelections="false" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c93-d46e-1a14-6bd4-max" includeChildSelections="false" automatic="true"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Combat Servitor" hidden="false" id="ee0b-807f-0ab6-d42f">
       <costs>
@@ -1151,13 +1157,29 @@ Against vehicles, frag grenades roll D6+4 for armour penetration.</characteristi
     <selectionEntry type="upgrade" import="true" name="Combi-melta" hidden="false" id="41b7-2235-bd40-76d3">
       <infoLinks>
         <infoLink name="Bolter" id="67b9-a4e2-7d2e-148c" hidden="false" type="profile" targetId="fa34-07ff-1a5d-fe9f"/>
-        <infoLink name="Meltagun" id="b97f-7570-c4a7-8a14" hidden="false" type="profile" targetId="4771-d658-dd0f-2ccb"/>
+        <infoLink name="Meltagun" id="b97f-7570-c4a7-8a14" hidden="false" type="profile" targetId="4771-d658-dd0f-2ccb">
+          <modifiers>
+            <modifier type="append" value="One Shot" field="8b10-045a-f593-605e" affects="profiles.Weapon" join=", ">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1738-0373-fa71-f97b" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Combi-weapon" id="53bf-e1b5-ccbf-2ba6" hidden="false" type="rule" targetId="0c5f-0c8f-a76b-1245"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Combi-plasma" hidden="false" id="a177-d140-7d8c-4d42">
       <infoLinks>
-        <infoLink name="Plasma Gun" id="b751-55b0-312c-96d5" hidden="false" type="profile" targetId="45fb-35fd-3a93-bc60"/>
+        <infoLink name="Plasma Gun" id="b751-55b0-312c-96d5" hidden="false" type="profile" targetId="45fb-35fd-3a93-bc60">
+          <modifiers>
+            <modifier type="append" value="One Shot" field="8b10-045a-f593-605e" affects="profiles.Weapon" join=", ">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1738-0373-fa71-f97b" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Bolter" id="0dbc-dad3-e73e-48cd" hidden="false" type="profile" targetId="fa34-07ff-1a5d-fe9f"/>
         <infoLink name="Combi-weapon" id="d02a-c3fe-87fd-84bb" hidden="false" type="rule" targetId="0c5f-0c8f-a76b-1245"/>
       </infoLinks>
@@ -1165,7 +1187,11 @@ Against vehicles, frag grenades roll D6+4 for armour penetration.</characteristi
     <selectionEntry type="upgrade" import="true" name="Combi-flamer" hidden="false" id="1738-0373-fa71-f97b">
       <infoLinks>
         <infoLink name="Bolter" id="a34b-a269-c08b-f838" hidden="false" type="profile" targetId="fa34-07ff-1a5d-fe9f"/>
-        <infoLink name="Flamer" id="eb7d-719f-eb47-d433" hidden="false" type="profile" targetId="e329-1729-419b-2bb6"/>
+        <infoLink name="Flamer" id="eb7d-719f-eb47-d433" hidden="false" type="profile" targetId="e329-1729-419b-2bb6">
+          <modifiers>
+            <modifier type="append" value="One Shot" field="8b10-045a-f593-605e" affects="profiles.Weapon" join=", "/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Combi-weapon" id="0ca0-6139-4f75-a6e9" hidden="false" type="rule" targetId="0c5f-0c8f-a76b-1245"/>
       </infoLinks>
     </selectionEntry>
@@ -1209,7 +1235,6 @@ Against vehicles, frag grenades roll D6+4 for armour penetration.</characteristi
         <infoLink name="Force Weapon" id="9a4b-f4fc-2e00-8c2c" hidden="false" type="profile" targetId="29ac-7e83-0ba0-5fd3"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="New Entry" hidden="false" id="5387-c388-345c-68c3"/>
     <selectionEntry type="upgrade" import="true" name="Hunter-killer Missile" hidden="false" id="ff72-89fa-37d7-07a2">
       <infoLinks>
         <infoLink name="Hunter-killer Missile" id="3d2e-d9f5-aeab-60f4" hidden="false" type="profile" targetId="94a2-3ab9-3532-a92b"/>

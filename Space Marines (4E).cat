@@ -3459,7 +3459,6 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
                 <condition type="equalTo" value="0" field="selections" scope="force" childId="213a-8bf1-e310-6baa" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
-            <conditionGroup type="and"/>
           </conditionGroups>
         </modifier>
         <modifier type="add" value="915b-6b49-dbe2-78ee" field="category" scope="parent"/>
@@ -4346,18 +4345,7 @@ The effect of the Lion Helm does not extend to vehicles.</characteristic>
             <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="1395-2cee-6861-0e1f" includeChildSelections="false" automatic="false"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Special Skills" hidden="false" id="509e-b9a8-83bb-ad00" type="selectionEntryGroup" targetId="ac78-e6e9-a411-196a" sortIndex="6">
-          <modifiers>
-            <modifier type="set" value="1" field="f6ec-233d-9f04-8944">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="39ab-2bcd-49d1-cfef" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f6ec-233d-9f04-8944" automatic="true"/>
-          </constraints>
-        </entryLink>
+        <entryLink import="true" name="Special Skills" hidden="false" id="509e-b9a8-83bb-ad00" type="selectionEntryGroup" targetId="ac78-e6e9-a411-196a" sortIndex="6"/>
         <entryLink import="true" name="Acute Senses" hidden="false" id="0d9a-e396-d228-01ee" type="selectionEntry" targetId="1404-a280-765e-cdd2"/>
         <entryLink import="true" name="Transport" hidden="false" id="beb9-87a6-5858-1346" type="selectionEntryGroup" targetId="f59a-7dd6-663f-131b"/>
         <entryLink import="true" name="True Grit &amp; Counter-Attack" hidden="false" id="753c-92ef-f357-8e3e" type="selectionEntry" targetId="52fc-b5e0-4a5a-59ca"/>
@@ -4591,6 +4579,16 @@ The effect of the Lion Helm does not extend to vehicles.</characteristic>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="45de-058b-6030-eb48" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="11cf-dc94-5c14-2c2a" shared="true"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -5415,13 +5413,11 @@ Castellan missiles are fired singly, each contains dozens of mines which upon th
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7188-ebc2-34c0-cc2f" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="397f-691b-4e04-90b1" includeChildSelections="false"/>
           </constraints>
+          <costs>
+            <cost name="Points" typeId="4deb-313d-6685-f48b" value="18"/>
+          </costs>
         </entryLink>
-        <entryLink import="true" name="Special Skills" hidden="false" id="a51a-3e80-9419-d70a" type="selectionEntryGroup" targetId="ac78-e6e9-a411-196a" sortIndex="6">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f77a-40f6-a5a5-b42b-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f77a-40f6-a5a5-b42b-max" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
+        <entryLink import="true" name="Special Skills" hidden="false" id="a51a-3e80-9419-d70a" type="selectionEntryGroup" targetId="ac78-e6e9-a411-196a" sortIndex="6"/>
         <entryLink import="true" name="Frag Grenades" hidden="false" id="2797-e263-798d-83e1" type="selectionEntry" targetId="2d20-fb36-3564-0dbe" sortIndex="4">
           <costs>
             <cost name="Points" typeId="4deb-313d-6685-f48b" value="0"/>
@@ -5490,6 +5486,9 @@ Castellan missiles are fired singly, each contains dozens of mines which upon th
               </constraints>
             </entryLink>
           </entryLinks>
+          <costs>
+            <cost name="Points" typeId="4deb-313d-6685-f48b" value="18"/>
+          </costs>
         </entryLink>
         <entryLink import="true" name="Acute Senses" hidden="false" id="6271-9866-0cac-9236" type="selectionEntry" targetId="1404-a280-765e-cdd2"/>
         <entryLink import="true" name="Transport" hidden="false" id="67b3-f0c4-7ab7-f0d3" type="selectionEntryGroup" targetId="f59a-7dd6-663f-131b"/>
@@ -8250,6 +8249,8 @@ If you select a named chapter from above and choose to use codex divergent trait
                 <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="9996-88e2-8ff9-a37c" shared="true" roundUp="false" includeChildSelections="true"/>
                 <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="8051-d1f8-666c-c5e2" shared="true" roundUp="false" includeChildSelections="true"/>
                 <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="terminatorsergeant" shared="true" roundUp="false" includeChildSelections="true"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1507-f6be-3680-5e10" shared="true" roundUp="false" includeChildSelections="true"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="bddd-b518-aa98-9fac" shared="true" roundUp="false" includeChildSelections="true"/>
               </repeats>
               <conditionGroups>
                 <conditionGroup type="and">
@@ -8330,6 +8331,8 @@ If you select a named chapter from above and choose to use codex divergent trait
                 <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="9996-88e2-8ff9-a37c" shared="true" roundUp="false" includeChildSelections="true"/>
                 <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="8051-d1f8-666c-c5e2" shared="true" roundUp="false" includeChildSelections="true"/>
                 <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="terminatorsergeant" shared="true" roundUp="false" includeChildSelections="true"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="bddd-b518-aa98-9fac" shared="true" roundUp="false" includeChildSelections="true"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1507-f6be-3680-5e10" shared="true" roundUp="false" includeChildSelections="true"/>
               </repeats>
               <conditionGroups>
                 <conditionGroup type="and">
@@ -8441,12 +8444,23 @@ If you select a named chapter from above and choose to use codex divergent trait
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d4a-7410-b33a-8a89" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f6ec-233d-9f04-8944" automatic="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="e39c-0852-74f1-402d" shared="true" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="f6ec-233d-9f04-8944">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="39ab-2bcd-49d1-cfef" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="5330-7b73-1fd2-d75f" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntryGroup>
@@ -8986,6 +9000,19 @@ If when using this power the Librarian rolls a 12 on his Psychic test, resolve t
             <condition type="atLeast" value="1" field="selections" scope="force" childId="25a6-2980-b55b-0b6f" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Bike Squadron" hidden="true" id="5e04-03c8-7e62-97c5" type="selectionEntry" targetId="6acb-a381-8f5c-abdb">
+      <categoryLinks>
+        <categoryLink name="Troops" hidden="false" id="9aed-24ec-62ad-8120" targetId="23e2-2a28-50f4-a3c1" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="45de-058b-6030-eb48" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="remove" value="11cf-dc94-5c14-2c2a" field="category"/>
       </modifiers>
     </entryLink>
   </entryLinks>

@@ -38,6 +38,7 @@
     <entryLink import="true" name="Commander" hidden="false" id="6e41-2158-620d-98da" type="selectionEntry" targetId="3e34-7cee-6d3e-25f1" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Blood Angel" hidden="false" id="c303-a4f6-f209-9d29" targetId="e39c-0852-74f1-402d" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="b2f5-c189-c288-3cbf" targetId="0d45-9523-cfd8-4efd" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Blood Angels Honour Guard" hidden="false" id="2cd5-8abf-e624-2913" type="selectionEntry" targetId="fabc-5c51-ed3a-b9f5"/>
@@ -46,6 +47,7 @@
     <entryLink import="true" name="Chapter Librarian" hidden="false" id="f4c1-958b-2762-7cbf" type="selectionEntry" targetId="cd2f-5665-5521-8396" sortIndex="3">
       <categoryLinks>
         <categoryLink name="Blood Angel" hidden="false" id="22cb-1368-651c-1669" targetId="e39c-0852-74f1-402d" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="bca3-d0c7-5c34-40e7" targetId="0d45-9523-cfd8-4efd" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Blood Angels Honour Guard" hidden="false" id="da2e-0930-ff58-755a" type="selectionEntry" targetId="fabc-5c51-ed3a-b9f5"/>
@@ -54,6 +56,7 @@
     <entryLink import="true" name="Chapter Chaplain" hidden="false" id="8d99-342e-7c36-667b" type="selectionEntry" targetId="81e5-498e-ee8c-e348" sortIndex="2">
       <categoryLinks>
         <categoryLink name="Blood Angel" hidden="false" id="d8a5-56fd-9a0e-39ed" targetId="e39c-0852-74f1-402d" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="d24b-4609-34a0-2ba2" targetId="0d45-9523-cfd8-4efd" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Death Company" hidden="false" id="0835-60a5-2be9-984e" type="selectionEntry" targetId="7205-9c16-857d-ba53">
