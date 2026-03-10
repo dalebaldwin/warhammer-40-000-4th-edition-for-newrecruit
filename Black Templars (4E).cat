@@ -239,8 +239,15 @@
                     <infoLink name="Close Combat Weapon" id="f90c-b729-86e4-4847" hidden="false" type="profile" targetId="7b3d-1932-99ef-f5c8"/>
                   </infoLinks>
                   <costs>
-                    <cost name="Points" typeId="4deb-313d-6685-f48b" value="10"/>
+                    <cost name="Points" typeId="4deb-313d-6685-f48b" value="3"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9f35-3668-d398-7bb4" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </selectionEntry>
               </selectionEntries>
               <modifiers>
