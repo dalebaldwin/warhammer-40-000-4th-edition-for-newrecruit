@@ -853,20 +853,7 @@ He may treat any friendly non-vehicle model within 6&quot; of him. In the enemy 
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Armoury" hidden="false" id="4c2c-ceea-e6cc-1a10" type="selectionEntryGroup" targetId="armoury1" sortIndex="3"/>
-        <entryLink import="true" name="Command Squad" hidden="false" id="cbf5-5790-eb1f-5ff3" type="selectionEntry" targetId="1202-16ac-4bf1-c237" sortIndex="4">
-          <entryLinks>
-            <entryLink import="true" name="Chaplain Grimaldus, Hero of Helsreach" hidden="true" id="cdf4-b76c-9560-d788" type="selectionEntry" targetId="8665-850e-0b11-9fec" sortIndex="10">
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="9936-1255-bf77-b8fe" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="remove" value="0d45-9523-cfd8-4efd" field="category"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </entryLink>
+        <entryLink import="true" name="Command Squad" hidden="false" id="cbf5-5790-eb1f-5ff3" type="selectionEntry" targetId="1202-16ac-4bf1-c237" sortIndex="4"/>
         <entryLink import="true" name="Terminator Command Squad" hidden="false" id="8716-c967-f7b5-39ab" type="selectionEntry" targetId="dfad-a748-913f-6a1f" sortIndex="5"/>
         <entryLink import="true" name="Deathwing" hidden="false" id="df6c-350b-d6c0-6887" type="selectionEntry" targetId="1f0e-c351-e783-f25f" sortIndex="2"/>
       </entryLinks>
@@ -5404,11 +5391,11 @@ Castellan missiles are fired singly, each contains dozens of mines which upon th
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f2df-b4e7-57bb-c30d-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Multi-melta (Hull-mounted)" hidden="false" id="d114-2aed-33e9-a903" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Multi-melta (Pintle-mounted)" hidden="false" id="d114-2aed-33e9-a903" sortIndex="2">
           <infoLinks>
             <infoLink name="Multi-melta" id="b04d-3c60-db62-be54" hidden="false" type="profile" targetId="1b9f-dc29-44a8-9237">
               <modifiers>
-                <modifier type="set" value="Multi-melta (Hull-mounted)" field="name"/>
+                <modifier type="set" value="Multi-melta (Pintle-mounted)" field="name"/>
               </modifiers>
             </infoLink>
           </infoLinks>

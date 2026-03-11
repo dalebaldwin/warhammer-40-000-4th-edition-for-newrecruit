@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue library="false" id="9725-0eb8-9204-b3ba" name="Black Templars (4E)" gameSystemId="sys-b41a-8226-286b-0dea" gameSystemRevision="3" revision="1" authorName="Kothra" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
-    <entryLink import="true" name="Commander" hidden="false" id="84ab-77d8-bc18-c107" type="selectionEntry" targetId="3e34-7cee-6d3e-25f1">
-      <categoryLinks>
-        <categoryLink name="Black Templar" hidden="false" id="bd5d-47ae-9c1b-4bad" targetId="9936-1255-bf77-b8fe" primary="false"/>
-        <categoryLink name="HQ" hidden="false" id="b8ee-d721-252b-c4a7" targetId="0d45-9523-cfd8-4efd" primary="true"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Crusader Seals" hidden="false" id="c3e6-5509-afc7-be20" type="selectionEntry" targetId="d2ba-67e4-c5b7-2bdd" sortIndex="2">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8b54-f64e-9956-4d54-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b54-f64e-9956-4d54-max" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
-        <entryLink import="true" name="Sword Brethren Terminator Command Squad" hidden="false" id="a571-f7c5-d9ea-4fe4" type="selectionEntry" targetId="ca58-ecc7-69b5-d7a8" sortIndex="5"/>
-      </entryLinks>
-    </entryLink>
     <entryLink import="true" name="Chapter Chaplain" hidden="false" id="a247-e102-9aa7-aa56" type="selectionEntry" targetId="81e5-498e-ee8c-e348">
       <entryLinks>
         <entryLink import="true" name="Command Squad" hidden="false" id="1974-3d11-cb96-e94d" type="selectionEntry" targetId="1202-16ac-4bf1-c237" sortIndex="6"/>
@@ -1505,6 +1490,119 @@
           <description>Once Grimaldus has lost all of his Wounds (even if caused by a weapon that causes Instant Death), do not remove him from play. Instead, take a Leadership test and if this is passed, Grimaldus fights on with 1 Wound remaining. If he loses this Wound remove him from the table. Grimaldus must take a Leadership test at the beginning of each game turn for the rest of the battle. If this is passed he fights on, but if it is failed he is removed from play.</description>
         </rule>
       </rules>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Commander" hidden="false" id="2ef6-3bac-003d-39d6" publicationId="e1e7-bf54-15e0-5ded" page="28">
+      <categoryLinks>
+        <categoryLink name="Character" hidden="false" id="8dfd-35dd-91d2-0048" targetId="c918-96c1-1ff1-3df1" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="a8bc-6595-aa21-016a" targetId="0d45-9523-cfd8-4efd" primary="true"/>
+        <categoryLink name="Black Templar" hidden="false" id="0c26-cd68-b09c-673d" targetId="9936-1255-bf77-b8fe" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Commander" id="89f5-34c8-b14a-63c2" hidden="false" defaultSelectionEntryId="e993-8efa-781f-7d26" sortIndex="1" flatten="true">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Captain" hidden="false" id="6d56-8bd4-df06-e2e8" sortIndex="1">
+              <profiles>
+                <profile name="Captain" typeId="556e697423232344415441232323" typeName="Unit" hidden="false" id="d26f-962a-7827-58cd" publicationId="e1e7-bf54-15e0-5ded" page="28">
+                  <characteristics>
+                    <characteristic name="Unit Type" typeId="556e6974205479706523232344415441232323">Infantry, Character</characteristic>
+                    <characteristic name="WS" typeId="5.753232323444154e+23">5</characteristic>
+                    <characteristic name="BS" typeId="4.2532323234441546e+23">5</characteristic>
+                    <characteristic name="S" typeId="5.323232344415441e+21">4</characteristic>
+                    <characteristic name="T" typeId="5.423232344415441e+21">4</characteristic>
+                    <characteristic name="W" typeId="5.723232344415441e+21">2</characteristic>
+                    <characteristic name="I" typeId="4.923232344415441e+21">5</characteristic>
+                    <characteristic name="A" typeId="4.123232344415441e+21">3</characteristic>
+                    <characteristic name="LD" typeId="4c4423232344415441232323">9</characteristic>
+                    <characteristic name="Sv" typeId="5.361766523232344e+27">3+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="60"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="Castellan" field="name"/>
+                    <modifier type="set" value="Castellan" field="name" affects="profiles.Unit"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9936-1255-bf77-b8fe" shared="true"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Master" hidden="false" id="4754-17c2-f5e6-f099" sortIndex="2">
+              <profiles>
+                <profile name="Master" typeId="556e697423232344415441232323" typeName="Unit" hidden="true" id="4a9e-705e-1dfd-bfc6" publicationId="e1e7-bf54-15e0-5ded" page="28">
+                  <characteristics>
+                    <characteristic name="Unit Type" typeId="556e6974205479706523232344415441232323">Infantry, Character</characteristic>
+                    <characteristic name="WS" typeId="5.753232323444154e+23">5</characteristic>
+                    <characteristic name="BS" typeId="4.2532323234441546e+23">5</characteristic>
+                    <characteristic name="S" typeId="5.323232344415441e+21">4</characteristic>
+                    <characteristic name="T" typeId="5.423232344415441e+21">4</characteristic>
+                    <characteristic name="W" typeId="5.723232344415441e+21">3</characteristic>
+                    <characteristic name="I" typeId="4.923232344415441e+21">5</characteristic>
+                    <characteristic name="A" typeId="4.123232344415441e+21">3</characteristic>
+                    <characteristic name="LD" typeId="4c4423232344415441232323">10</characteristic>
+                    <characteristic name="Sv" typeId="5.361766523232344e+27">3+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="75"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="Marshal" field="name"/>
+                    <modifier type="set" value="Marshal" field="name" affects="profiles.Unit"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9936-1255-bf77-b8fe" shared="true"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1139-f937-ad8b-f8f3" includeChildSelections="false" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acca-d45a-4a32-7f0c" includeChildSelections="false" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="5" field="4deb-313d-6685-f48b" affects="self.entries">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9936-1255-bf77-b8fe" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Armoury" hidden="false" id="dcda-aba2-197f-b913" type="selectionEntryGroup" targetId="armoury1" sortIndex="3"/>
+        <entryLink import="true" name="Command Squad" hidden="false" id="10c5-0c40-f3ee-3b60" type="selectionEntry" targetId="1202-16ac-4bf1-c237" sortIndex="4">
+          <entryLinks>
+            <entryLink import="true" name="Chaplain Grimaldus, Hero of Helsreach" hidden="true" id="1a87-4fd2-d977-e642" type="selectionEntry" targetId="8665-850e-0b11-9fec" sortIndex="10">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="9936-1255-bf77-b8fe" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="remove" value="0d45-9523-cfd8-4efd" field="category"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="Terminator Command Squad" hidden="false" id="249b-b240-ad40-d151" type="selectionEntry" targetId="dfad-a748-913f-6a1f" sortIndex="5"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Rites of Battle" id="2516-8ced-6c35-adf7" hidden="false" type="rule" targetId="2443-287f-f8df-ffa4"/>
+        <infoLink name="And They Shall Know No Fear" id="f5f9-0c28-6b52-c6aa" hidden="false" type="rule" targetId="8eaf-de62-f965-125b"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="4deb-313d-6685-f48b" value="0"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <rules>
