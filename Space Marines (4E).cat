@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="c99d-b51f-afe5-22cb" name="Space Marines (4E)" gameSystemId="sys-b41a-8226-286b-0dea" gameSystemRevision="1" revision="6" battleScribeVersion="2.03" publicationId="e1e7-bf54-15e0-5ded" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorName="Kothra">
+<catalogue library="false" id="c99d-b51f-afe5-22cb" name="Space Marines (4E)" gameSystemId="sys-b41a-8226-286b-0dea" gameSystemRevision="1" revision="7" battleScribeVersion="2.03" publicationId="e1e7-bf54-15e0-5ded" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorName="Kothra">
   <sharedProfiles>
     <profile name="Space Marine" typeId="556e697423232344415441232323" typeName="Unit" hidden="false" id="2d36-f6b7-fe66-ff61" noindex="true">
       <characteristics>
@@ -2688,6 +2688,12 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9936-1255-bf77-b8fe" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="sergeant1" shared="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="ffc4-9fce-350d-21ca" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -2803,7 +2809,12 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
     </selectionEntry>
     <selectionEntry type="upgrade" import="false" name="Be Swift as the Wind" hidden="false" id="45de-058b-6030-eb48">
       <rules>
-        <rule name="Be Swift as the Wind" id="02f9-b333-a730-3d35" hidden="false"/>
+        <rule name="Be Swift as the Wind" id="02f9-b333-a730-3d35" hidden="false">
+          <description>May take Bike Squadrons as Elites or as Troops.
+Any taken as Elites must select either the Tank Hunter or Furious Charge skill at a cost of +3 points per model.
+Any taken as Troops must be at least 5 models strong.
+Any Bike Squadron may take the Expert Rider special rule at +2 points per model.</description>
+        </rule>
       </rules>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="3148-5218-4368-058c" includeChildSelections="true" automatic="true"/>
@@ -2821,12 +2832,17 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="02e1-233e-7e51-4d3b" includeChildSelections="true" automatic="true"/>
       </constraints>
       <rules>
-        <rule name="Blessed be the Warriors" id="bc64-9594-8b55-28a3" hidden="false"/>
+        <rule name="Blessed be the Warriors" id="bc64-9594-8b55-28a3" hidden="false">
+          <description>May take Assault Squads as Elites and/or as Fast Attack.
+If taken as Elites, these squads must take the Furious Assault skill at 3 points per model.</description>
+        </rule>
       </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="false" name="Cleanse and Purify" hidden="false" id="9f8b-6340-b246-8b2a">
       <rules>
-        <rule name="Cleanse and Purify" id="3355-4c7e-2b68-e6b9" hidden="false"/>
+        <rule name="Cleanse and Purify" id="3355-4c7e-2b68-e6b9" hidden="false">
+          <description>One member of a Tactical Squad may replace his missile launcher with a flamer or his lascannon with a plasma gun or melta gun.</description>
+        </rule>
       </rules>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="c755-adab-218d-cd4a" includeChildSelections="true" automatic="true"/>
@@ -2837,7 +2853,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="0c93-a62b-3e9d-5872" includeChildSelections="true" automatic="true"/>
       </constraints>
       <rules>
-        <rule name="Heed the Wisdom of the Ancients" id="7226-5252-295b-3afa" hidden="false"/>
+        <rule name="Heed the Wisdom of the Ancients" id="7226-5252-295b-3afa" hidden="false">
+          <description>Dreadnoughts may be taken as Heavy Support or as Elites. Any Dreadnoughts selected as Elites must be Venerable and the 0-1 limit is removed. May not be selected by a Chapter that has taken Aspire to Glory.</description>
+        </rule>
       </rules>
       <modifiers>
         <modifier type="set" value="0" field="0c93-a62b-3e9d-5872">
@@ -2852,7 +2870,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="3066-0c9d-0ce1-74f0" includeChildSelections="true" automatic="true"/>
       </constraints>
       <rules>
-        <rule name="Honour your wargear" id="6791-9a61-c14c-dfdb" hidden="false"/>
+        <rule name="Honour your wargear" id="6791-9a61-c14c-dfdb" hidden="false">
+          <description>May take Devastator Squads as Elites and/or as Heavy Support. If taken as Elites, these squads must take the Tank Hunter or Infiltrate skill at +3 points per model.</description>
+        </rule>
       </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="false" name="Never Despair" hidden="false" id="09a8-9ffd-50fa-6411">
@@ -2860,7 +2880,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a56c-14fd-6aed-8161" includeChildSelections="true" automatic="true"/>
       </constraints>
       <rules>
-        <rule name="Never Despair" id="a318-f4c9-4a2b-809e" hidden="false"/>
+        <rule name="Never Despair" id="a318-f4c9-4a2b-809e" hidden="false">
+          <description>At the end of a game the Space Marine player can request an extra turn be played. Roll a dice; on a 4+ an extra turn is played. Games that end when a particular action is achieved, such as Sabotage, are not affected if the action is performed, but can be affected by allowing an extra turn for the action to be performed. If the Space Marine player does not exercise this option then his opponent may do so. If both armies have this option then an extra turn must always be played.</description>
+        </rule>
       </rules>
       <modifiers>
         <modifier type="set" value="0" field="a56c-14fd-6aed-8161">
@@ -2875,7 +2897,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="2683-7250-7e24-6d8b" includeChildSelections="true" automatic="true"/>
       </constraints>
       <rules>
-        <rule name="Heed the Wisdom of the Ancients" id="4b23-63f2-a6ff-9838" hidden="false"/>
+        <rule name="No Mercy, No Respite" id="4b23-63f2-a6ff-9838" hidden="false">
+          <description>Any Tactical or Assault squad may take the Furious Assault skill at a cost of 3+ points per model.</description>
+        </rule>
       </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="false" name="Purity Above All" hidden="false" id="60d2-d7a3-ab35-7086">
@@ -2883,7 +2907,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="30f1-0b34-e2fd-2ba7" includeChildSelections="true"/>
       </constraints>
       <rules>
-        <rule name="Purity Above All" id="e13c-53fe-80d2-dfc4" hidden="false"/>
+        <rule name="Purity Above All" id="e13c-53fe-80d2-dfc4" hidden="false">
+          <description>The Chapter is especially committed to combating mutation and corruption. Any Veteran or Tactical squad may upgrade its Veteran Sergeant to be an Apothecary. This upgrade costs a further +25 points and includes equipping the Apothecary with a Narthecium and Reductor.</description>
+        </rule>
       </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="false" name="Scions of Mars" hidden="false" id="1028-7523-6719-7232">
@@ -2891,7 +2917,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="06af-f952-11be-6499" includeChildSelections="true" automatic="true"/>
       </constraints>
       <rules>
-        <rule name="Scions of Mars" id="94a7-f444-74d1-8a68" hidden="false"/>
+        <rule name="Scions of Mars" id="94a7-f444-74d1-8a68" hidden="false">
+          <description>May upgrade a Techmarine to have an extra wound at +15 points. Any Techmarine upgraded in this way counts as an HQ selection and you may not use Commanders at all. Amend the points cost for the Terminator armour to 25/15, unless the Chapter has also taken Aspire to Glory. This does mean that single wound models can be given Terminator armour.</description>
+        </rule>
       </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="false" name="See, But Don&apos;t Be Seen" hidden="false" id="64e8-ca83-52d8-7a57">
@@ -2899,7 +2927,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="c7f0-df00-2f78-12c0" includeChildSelections="true" automatic="true"/>
       </constraints>
       <rules>
-        <rule name="See, But Don&apos;t Be Seen" id="835b-1799-8ff0-009b" hidden="false"/>
+        <rule name="See, But Don&apos;t Be Seen" id="835b-1799-8ff0-009b" hidden="false">
+          <description>Any Tactical or Devastator squad, that does not have a transport vehicle, may take the Infiltrate skill at t a cost of +3 points per model. Any squad that has taken Infiltrate may take the Acute Senses skill at _1 per model (including Veteran Squads). May not be selected by a Chapter that has taken Have Pride in Your Colours.</description>
+        </rule>
       </rules>
       <modifiers>
         <modifier type="set" value="0" field="c7f0-df00-2f78-12c0">
@@ -2914,7 +2944,10 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="7d1e-1b44-42a5-7d13" includeChildSelections="true" automatic="true"/>
       </constraints>
       <rules>
-        <rule name="Suffer not the Alien to Live" id="539b-8b57-6562-2a1d" hidden="false"/>
+        <rule name="Suffer not the Alien to Live" id="539b-8b57-6562-2a1d" hidden="false">
+          <description>The Chapter is expert at fighting a particular xeno-species. All models have the Preferred Enemy special rule, against either Tyranids, Eldar (including Dark Eldar), or Orks. This ability costs 1 point per model.
+Every Space Marine non-vehicle model used must have this ability if any do. The choice of Preferred Enemy should be apparent from trophies and other embellishments on the models.</description>
+        </rule>
       </rules>
       <selectionEntryGroups>
         <selectionEntryGroup name="Preferred Enemy (1 point per model)" id="7c24-91be-6b28-e7ea" hidden="false">
@@ -2957,7 +2990,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b32b-4725-2078-7f7d" includeChildSelections="true" automatic="true"/>
       </constraints>
       <rules>
-        <rule name="Suffer not the Work of Heretics" id="2234-d39c-b432-15a2" hidden="false"/>
+        <rule name="Suffer not the Work of Heretics" id="2234-d39c-b432-15a2" hidden="false">
+          <description>Any Tactical Squad or Devastator Squad may take the Tank Hunters skill at a cost of +3 points per model.</description>
+        </rule>
       </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="false" name="Take the Fight to Them" hidden="false" id="e09c-86b2-ab2b-a901">
@@ -2965,7 +3000,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="db9a-6683-6cc2-a557" includeChildSelections="true" automatic="true"/>
       </constraints>
       <rules>
-        <rule name="Take the Fight to Them" id="9091-c053-a94a-312d" hidden="false"/>
+        <rule name="Take the Fight to Them" id="9091-c053-a94a-312d" hidden="false">
+          <description>Any model with a bolter in a Tactical squad, who is not an independent character, may exchange it for a bolt pistol and close combat weapon at no extra cost.</description>
+        </rule>
       </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="false" name="Trust Your Battle-Brothers" hidden="false" id="c555-1c8c-f4a9-1515">
@@ -2973,7 +3010,9 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="d800-0483-2204-138a" includeChildSelections="true" automatic="true"/>
       </constraints>
       <rules>
-        <rule name="Trust Your Battle-Brothers" id="b1cd-f65e-f283-c631" hidden="false"/>
+        <rule name="Trust Your Battle-Brothers" id="b1cd-f65e-f283-c631" hidden="false">
+          <description>Any Command, Veteran, Tactical, Assault, or Devastator squad may take the skills Counter-attack and True Grit at a cost of +3 points per model for both skills. Models with True Grit and a bolter are assumed to have a close combat weapon at no extra cost.</description>
+        </rule>
       </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="false" name="Uphold the Honour of the Emperor" hidden="false" id="4d80-5e5a-1146-82d7">
@@ -2981,33 +3020,39 @@ Any model wearing Terminator armour can be teleported onto the battlefield and s
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="cd04-7713-a729-dbb7" includeChildSelections="true"/>
       </constraints>
       <rules>
-        <rule name="Uphold the Honour of the Emperor" id="4837-ea95-ccd9-a907" hidden="false"/>
+        <rule name="Uphold the Honour of the Emperor" id="4837-ea95-ccd9-a907" hidden="false">
+          <description>Any Command Squad or Veteran Squad may take a vow to trust the Emperor for their protection. They duly receive a 6+ Invulnerable Save  (against shooting only), but do not receive cover saves.</description>
+        </rule>
       </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Bolt Pistol &amp; Close combat weapon" hidden="false" id="7f30-e510-d3b1-0acf">
       <infoLinks>
-        <infoLink name="Bolt Pistol" id="5bff-91f6-3b7d-0595" hidden="false" type="profile" targetId="d2c2-d25d-9a03-afc4"/>
-        <infoLink name="Close Combat Weapon" id="a328-a417-e68f-bbf1" hidden="false" type="profile" targetId="7b3d-1932-99ef-f5c8"/>
-      </infoLinks>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="or">
+        <infoLink name="Bolt Pistol" id="5bff-91f6-3b7d-0595" hidden="false" type="profile" targetId="d2c2-d25d-9a03-afc4">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="16bd-1997-ce61-f3ce" shared="true"/>
-                    <condition type="notEqualTo" value="1" field="selections" scope="force" childId="e09c-86b2-ab2b-a901" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="41a4-2ccc-b269-fa51" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="43f8-0d25-b271-4d6c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1fcb-2c8e-4cc2-c033" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Close Combat Weapon" id="a328-a417-e68f-bbf1" hidden="false" type="profile" targetId="7b3d-1932-99ef-f5c8">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9a67-bbf2-d922-2bc9" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="b28f-478a-74fb-ec87" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="57ca-c59f-1fa9-e1b5" shared="true" includeChildSelections="true"/>
               </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Acute Senses" hidden="true" id="1404-a280-765e-cdd2">
       <infoLinks>
@@ -5581,7 +5626,7 @@ Castellan missiles are fired singly, each contains dozens of mines which upon th
         <entryLink import="true" name="Vow to the Emperor" hidden="false" id="dde8-884a-f4b1-ab42" type="selectionEntry" targetId="9850-b73e-3f6a-8ae7"/>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="2d15-1a5d-be77-5759"/>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="2d15-1a5d-be77-5759" includeChildSelections="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="1" field="2d15-1a5d-be77-5759">
@@ -6581,6 +6626,9 @@ If you select a named chapter from above and choose to use codex divergent trait
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="1"/>
+              </costs>
             </entryLink>
             <entryLink import="true" name="Jump Pack" hidden="false" id="c2e8-4f15-1ffc-6b5b" type="selectionEntry" targetId="ad18-c21b-2a52-ef86">
               <constraints>
@@ -6634,6 +6682,9 @@ If you select a named chapter from above and choose to use codex divergent trait
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="2"/>
+              </costs>
             </entryLink>
             <entryLink import="true" name="Melta Bombs" hidden="false" id="6ebd-c76f-b3f4-6765" type="selectionEntry" targetId="a1bb-d7bf-d627-b59f">
               <constraints>
@@ -6651,6 +6702,9 @@ If you select a named chapter from above and choose to use codex divergent trait
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="4"/>
+              </costs>
             </entryLink>
             <entryLink import="true" name="Terminator Honours" hidden="false" id="84f2-ea99-5e1b-d75a" type="selectionEntry" targetId="7461-f70a-5205-fe07">
               <modifiers>
@@ -7178,7 +7232,7 @@ If you select a named chapter from above and choose to use codex divergent trait
                   <profiles>
                     <profile name="Holy Relic" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="03e2-dcff-5660-0e4e">
                       <characteristics>
-                        <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">A model bearing a holy relic may reveal it oncer per battle at any point. On the turn the relic is revealed, all Space Marines within 2D6&quot; get a +1 Attack bonus for the rest of that turn. The relic may be revealed in an opposing player&apos;s turn if you wish.</characteristic>
+                        <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">A model bearing a holy relic may reveal it once per battle at any point. On the turn the relic is revealed, all Space Marines within 2D6&quot; get a +1 Attack bonus for the rest of that turn. The relic may be revealed in an opposing player&apos;s turn if you wish.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -8149,12 +8203,22 @@ If you select a named chapter from above and choose to use codex divergent trait
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Aspire to Glory" hidden="false" id="8f0b-efba-7e72-b45c" sortIndex="1">
                   <rules>
-                    <rule name="Aspire to Glory" id="91ee-8f49-d52f-3b53" hidden="false"/>
+                    <rule name="Aspire to Glory" id="91ee-8f49-d52f-3b53" hidden="false">
+                      <description>Almost all technology used by Space Marine Chapters is ancient and precious. Dreadnoughts and Terminator armour for example require rare artificer skills. A recently founded Chapter may take centuries to acquire such equipment and, should battle losses be heavy, replacements are not readily available.
+May take only 0-1 selection in total from the following list: Dreadnought, Terminator Squad.
+May not take any Terminator Command Squads or Terminator Assault Squads.
+May only take 0-1 Veteran Squads.
+May not take Terminator armour as wargear.
+May not take any relics or artefacts from the Armoury.</description>
+                    </rule>
                   </rules>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Eye to Eye" hidden="false" id="2607-0199-232f-a932" sortIndex="2">
                   <rules>
-                    <rule name="Eye to Eye" id="ac98-0891-bcc4-8ddb" hidden="false"/>
+                    <rule name="Eye to Eye" id="ac98-0891-bcc4-8ddb" hidden="false">
+                      <description>Although the Codex Astartes includes extensive guidance on raiding, hit and run and guerilla warfare these techniques are not universally employed. The Chapter may not be able to train in these tactics (due to lack of equipment or training facilities) or be temperamentally opposed to them. This drawback may not be selected along with Be Swift as the Wind.
+May only take 0-1 selection in total from the following list: Land Speeder Squadrong, Attack Bike Squadron, Bike Squadron.</description>
+                    </rule>
                   </rules>
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b27-c478-6685-3119" automatic="true"/>
@@ -8181,7 +8245,12 @@ If you select a named chapter from above and choose to use codex divergent trait
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Flesh over Steel" hidden="false" id="1ce1-51e8-0686-2e46" sortIndex="3">
                   <rules>
-                    <rule name="Flesh over Steel" id="c8a0-256c-3855-1a48" hidden="false"/>
+                    <rule name="Flesh over Steel" id="c8a0-256c-3855-1a48" hidden="false">
+                      <description>Some Chapters either lack the facilities to equip or to train themselves with the heaviest equipment or they have adopted specialised fighting techniques that make such equipment less significant to them. The desire to prevail through their fighting qualities rather than through operating machinery can also be a factor.
+May only take 0-1 selection in total from the following list: Land Raider, Predator Destructor, Whirlwind, Vindicator.
+May not use Land Raider Crusader or Predator Annihilator.
+Each transport option selected uses up a Fast Attack slot on the Force Organisation Chart.</description>
+                    </rule>
                   </rules>
                   <modifiers>
                     <modifier type="set" value="1" field="95bc-7703-83c9-7844">
@@ -8314,7 +8383,10 @@ If you select a named chapter from above and choose to use codex divergent trait
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Death Before Dishonour" hidden="false" id="3734-7ea0-b2fe-b8f6">
                   <rules>
-                    <rule name="Death Before Dishonour" id="15e0-d6be-d12b-1d71" hidden="false"/>
+                    <rule name="Death Before Dishonour" id="15e0-d6be-d12b-1d71" hidden="false">
+                      <description>Space Marines never accept defeat. Sometimes however this can be unwise, and stubbornness can lead to needless sacrifice. The history of the Space Marines is littered with heroic last stands, at least some of which were probably unnecessary. The Codex Astartes advises powerfully against this problem, but these teachings are not always heeded by the proud Adeptus Astartes.
+At the end of any game involving one army with this drawback, the opposing player can request an extra turn be played. roll a dice; on 4+ an extra turn is played. Games that end when a particular action is achieved, such as Sabotage, are not affected if the action is performed, but can be affected by allowing an extra turn for the action to be performed. This drawback may never be combined with the Never Despair advantage.</description>
+                    </rule>
                   </rules>
                   <constraints>
                     <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="5573-ac83-7fb2-35c3" includeChildSelections="false" automatic="true"/>
@@ -8329,12 +8401,18 @@ If you select a named chapter from above and choose to use codex divergent trait
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Die Standing" hidden="false" id="af6f-df64-0189-212d">
                   <rules>
-                    <rule name="Die Standing" id="d188-f13e-7080-3ef9" hidden="false"/>
+                    <rule name="Die Standing" id="d188-f13e-7080-3ef9" hidden="false">
+                      <description>Space Marines are best known for their daring orbital attacks and planetary assaults. Not all Chapters are willing to use such tactics however. A powerful fleet presence is required to make such tactics tenable and heavy losses can be suffered before the assault troops can confront the enemy. Whilst not common, there are Chapters who prefer to get their feet on the ground before entering battle.
+May not use the Drop Pod assault special rules.</description>
+                    </rule>
                   </rules>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Faithful unto Death" hidden="false" id="93eb-aee0-ad90-7026">
                   <rules>
-                    <rule name="Faithful unto Death" id="a902-85a6-84d9-42cd" hidden="false"/>
+                    <rule name="Faithful unto Death" id="a902-85a6-84d9-42cd" hidden="false">
+                      <description>The Chapter has suffered grievous losses and is significantly under strength. Each Company is unable to call upon significant support from the rest of the Chapter.
+The Chapter has one less Elite, Fast Attack, and Heavy Support choice on the force selection chart than the mission normally permits.</description>
+                    </rule>
                   </rules>
                   <constraints>
                     <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="681d-ebd2-543e-27c2" automatic="true"/>
@@ -8349,24 +8427,28 @@ If you select a named chapter from above and choose to use codex divergent trait
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Have Pride in Your Colours" hidden="false" id="7206-4f10-4726-92aa">
                   <rules>
-                    <rule name="Have Pride in Your Colours" id="b25d-c878-bbe3-76e0" hidden="false"/>
+                    <rule name="Have Pride in Your Colours" id="b25d-c878-bbe3-76e0" hidden="false">
+                      <description>Although all Space Marines proudly display their heraldry to intimidate the enemy the Codex Astartes makes provision for the use of stealth where appropriate. Some Space Marine Chapters take an extreme view and reject stealth in all its forms as an act of cowardice.
+No models may use the Infiltrate or Scouts special rules.</description>
+                    </rule>
                   </rules>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Have Faith in Suspicion" hidden="false" id="aa3b-b41f-8457-c12f">
                   <rules>
-                    <rule name="Have Faith in Suspicion" id="09bc-f67d-5c8d-1138" hidden="false"/>
+                    <rule name="Have Faith in Suspicion" id="09bc-f67d-5c8d-1138" hidden="false">
+                      <description>Within the Imperium the balance between distrust for psykers and the absolute need to make use of them is rarely achieved. Sharp reactionary views are commonplace and are often vindicated. Space Marine Chapter beliefs are equally divided and even in the most moderate Chapters Librarians tend to stand apart from their battle brothers, viewed with fearful awe as well as respect.
+May not use Librarians.
+May not use any allies with Psychic powers.</description>
+                    </rule>
                   </rules>
-                  <modifiers>
-                    <modifier type="add" value="NO ALLIES WITH PSYCHIC POWERS ALLOWED" field="info"/>
-                  </modifiers>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="We Stand Alone" hidden="false" id="7a20-a56e-fa7c-0408">
                   <rules>
-                    <rule name="We Stand Alone" id="9fb0-7d99-07f1-5be1" hidden="false"/>
+                    <rule name="We Stand Alone" id="9fb0-7d99-07f1-5be1" hidden="false">
+                      <description>The place of Space Marines within the hierarchy of the Imperium is a complex issue. All Chapters retain autonomy from the institutions of the Imperium, and the degree of cooperation they exhibit is also highly variable. Many Chapters are insular and isolationist, keeping their own secrets and resisting any external interference.
+May not use any Allies.</description>
+                    </rule>
                   </rules>
-                  <modifiers>
-                    <modifier type="add" value="NO ALLIES ALLOWED" field="info"/>
-                  </modifiers>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -8656,6 +8738,7 @@ If you select a named chapter from above and choose to use codex divergent trait
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="a10d-d7dd-4f63-b6a0" shared="true" includeChildSelections="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8a0f-5a7a-17cb-568f" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="5fee-5b5d-d4a3-c880" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="48c4-dddc-b334-25c4" shared="true" includeChildSelections="true"/>
                   </conditions>
                   <conditionGroups>
                     <conditionGroup type="and">
@@ -8687,6 +8770,7 @@ If you select a named chapter from above and choose to use codex divergent trait
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="a10d-d7dd-4f63-b6a0" shared="true" includeChildSelections="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8a0f-5a7a-17cb-568f" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="5fee-5b5d-d4a3-c880" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="48c4-dddc-b334-25c4" shared="true" includeChildSelections="true"/>
                   </conditions>
                   <conditionGroups>
                     <conditionGroup type="and">
@@ -8769,6 +8853,65 @@ If you select a named chapter from above and choose to use codex divergent trait
                         <condition type="atLeast" value="11" field="selections" scope="root-entry" childId="model" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="model" shared="true"/>
+                        <condition type="atLeast" value="10" field="selections" scope="root-entry" childId="model" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1259-68e5-5180-ddcb" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="atLeast" value="10" field="selections" scope="root-entry" childId="model" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="48c4-dddc-b334-25c4" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="atLeast" value="9" field="selections" scope="root-entry" childId="model" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="48c4-dddc-b334-25c4" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="atLeast" value="8" field="selections" scope="root-entry" childId="model" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="2" field="selections" scope="root-entry" childId="48c4-dddc-b334-25c4" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="atLeast" value="7" field="selections" scope="root-entry" childId="model" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="3" field="selections" scope="root-entry" childId="48c4-dddc-b334-25c4" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="atLeast" value="6" field="selections" scope="root-entry" childId="model" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="4" field="selections" scope="root-entry" childId="48c4-dddc-b334-25c4" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="atLeast" value="5" field="selections" scope="root-entry" childId="model" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="5" field="selections" scope="root-entry" childId="48c4-dddc-b334-25c4" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                        <conditionGroup type="or"/>
+                        <conditionGroup type="or"/>
+                        <conditionGroup type="or"/>
+                        <conditionGroup type="or"/>
+                        <conditionGroup type="or"/>
+                        <conditionGroup type="or"/>
+                      </conditionGroups>
+                    </conditionGroup>
                   </conditionGroups>
                   <conditions>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="16bd-1997-ce61-f3ce" shared="true"/>
@@ -8783,6 +8926,9 @@ If you select a named chapter from above and choose to use codex divergent trait
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="ca58-ecc7-69b5-d7a8" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9f35-3668-d398-7bb4" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="a014-2130-6d43-8fe4" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="bb7a-e04d-3905-b28b" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="926f-f2f8-bafe-572c" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="c8f9-233c-c42a-ef03" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -8855,6 +9001,11 @@ If you select a named chapter from above and choose to use codex divergent trait
         <modifier type="add" value="11cf-dc94-5c14-2c2a" field="category" affects="self.entries">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="1ce1-51e8-0686-2e46" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="da0f-af82-52b0-763e" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9246,7 +9397,6 @@ If when using this power the Librarian rolls a 12 on his Psychic test, resolve t
   <categoryEntries>
     <categoryEntry name="Black Templar" id="9936-1255-bf77-b8fe" hidden="false"/>
     <categoryEntry name="Dark Angel" id="9862-c761-5bd2-ffc7" hidden="false"/>
-    <categoryEntry name="Space Wolf" id="407e-febc-7e2c-0621" hidden="false"/>
     <categoryEntry name="Death Company" id="3c1a-0f72-de9c-14e3" hidden="true">
       <modifiers>
         <modifier type="set" value="false" field="hidden">

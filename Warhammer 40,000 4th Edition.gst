@@ -14,6 +14,7 @@
     </categoryEntry>
     <categoryEntry name="Death Company" id="0589-7c29-bfa2-d566" hidden="false"/>
     <categoryEntry name="Blood Angel" id="e39c-0852-74f1-402d" hidden="false"/>
+    <categoryEntry name="Space Wolf" id="407e-febc-7e2c-0621" hidden="false"/>
   </categoryEntries>
   <publications>
     <publication name="Warhammer 40,000 4th Edition Rulebook" id="c0d3-c074-f54c-9ec4" hidden="false" shortName="BRB" publisher="Warhammer 40,000 4th Edition Rulebook" publicationDate="2004/08/28" publisherUrl="https://wh40k.lexicanum.com/wiki/Warhammer_40,000_4th_Edition_Rulebook"/>
@@ -211,8 +212,8 @@
         </categoryLink>
         <categoryLink name="HQ" hidden="false" id="7d81-9036-eb2e-ffe7" targetId="0d45-9523-cfd8-4efd">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d15d-13be-9af4-458c" includeChildSelections="true"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="9ef5-4149-cac9-87bb" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d15d-13be-9af4-458c" includeChildSelections="true"/>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="9ef5-4149-cac9-87bb" includeChildSelections="true"/>
           </constraints>
           <modifiers>
             <modifier type="increment" value="1" field="9ef5-4149-cac9-87bb">
@@ -223,6 +224,26 @@
             <modifier type="increment" value="1" field="d15d-13be-9af4-458c">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="3d97-8e4b-f2f4-5ead" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="2" field="9ef5-4149-cac9-87bb">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="407e-febc-7e2c-0621" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="9ef5-4149-cac9-87bb">
+              <repeats>
+                <repeat value="750" repeats="1" field="4deb-313d-6685-f48b" scope="force" childId="407e-febc-7e2c-0621" shared="true" roundUp="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="d15d-13be-9af4-458c">
+              <repeats>
+                <repeat value="750" repeats="1" field="4deb-313d-6685-f48b" scope="force" childId="407e-febc-7e2c-0621" shared="true" roundUp="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" value="1" field="d15d-13be-9af4-458c">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="407e-febc-7e2c-0621" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -909,11 +930,12 @@ When engaged in close combat, enemy units must allocate their attacks between th
     <rule name="One Shot" id="e2de-8008-3908-c406" hidden="false">
       <description>This weapon may only be used once per battle.</description>
     </rule>
+    <rule name="Mixed Armour" id="a3dd-5a9d-6871-ff4e" hidden="false"/>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Frag Grenades" hidden="false" id="2d20-fb36-3564-0dbe">
       <costs>
-        <cost name="Points" typeId="4deb-313d-6685-f48b" value="1"/>
+        <cost name="Points" typeId="4deb-313d-6685-f48b" value="0"/>
       </costs>
       <profiles>
         <profile name="Frag Grenades" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="03d9-ffef-c80f-5272">
@@ -923,10 +945,13 @@ Against vehicles, frag grenades roll D6+4 for armour penetration.</characteristi
           </characteristics>
         </profile>
       </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="87d4-9645-16c0-1898" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Krak Grenades" hidden="false" id="f95f-36b5-33b7-c0f3">
       <costs>
-        <cost name="Points" typeId="4deb-313d-6685-f48b" value="2"/>
+        <cost name="Points" typeId="4deb-313d-6685-f48b" value="0"/>
       </costs>
       <profiles>
         <profile name="Krak Grenades" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="433d-b280-086f-a17b">
@@ -935,10 +960,13 @@ Against vehicles, frag grenades roll D6+4 for armour penetration.</characteristi
           </characteristics>
         </profile>
       </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a8a-6839-b4ec-bd8b" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Melta Bombs" hidden="false" id="a1bb-d7bf-d627-b59f" sortIndex="0">
       <costs>
-        <cost name="Points" typeId="4deb-313d-6685-f48b" value="5"/>
+        <cost name="Points" typeId="4deb-313d-6685-f48b" value="0"/>
       </costs>
       <profiles>
         <profile name="Melta Bombs" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="966b-eeda-876f-1104">
@@ -947,6 +975,9 @@ Against vehicles, frag grenades roll D6+4 for armour penetration.</characteristi
           </characteristics>
         </profile>
       </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a36e-b3be-4080-1373" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Bolt Pistol" hidden="false" id="b4d3-5dc3-8317-362c">
       <infoLinks>
@@ -1102,7 +1133,11 @@ Against vehicles, frag grenades roll D6+4 for armour penetration.</characteristi
         <infoLink name="Lascannon" id="1e67-49dc-5367-5789" hidden="false" type="profile" targetId="a985-b7e4-1396-ce64"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Flamer" hidden="false" id="4036-58f6-4c1e-1965"/>
+    <selectionEntry type="upgrade" import="true" name="Flamer" hidden="false" id="4036-58f6-4c1e-1965">
+      <infoLinks>
+        <infoLink name="Flamer" id="527a-4dae-12fe-ce35" hidden="false" type="profile" targetId="e329-1729-419b-2bb6"/>
+      </infoLinks>
+    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Missile Launcher" hidden="false" id="fbc2-9198-981d-6d4c">
       <infoLinks>
         <infoLink name="Missile Launcher (Frag)" id="39ff-1ff0-efd7-e9d2" hidden="false" type="profile" targetId="2774-242b-9be0-90f2"/>

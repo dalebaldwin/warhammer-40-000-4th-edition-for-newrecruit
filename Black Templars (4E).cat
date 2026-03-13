@@ -727,9 +727,6 @@
               </repeats>
             </modifier>
           </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4806-2b32-993f-ac44" includeChildSelections="false"/>
-          </constraints>
         </entryLink>
         <entryLink import="true" name="Krak Grenades" hidden="false" id="fd83-a99d-070a-f267" type="selectionEntry" targetId="f95f-36b5-33b7-c0f3" sortIndex="4">
           <costs>
@@ -742,9 +739,6 @@
               </repeats>
             </modifier>
           </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb96-b814-df1d-51b1" includeChildSelections="false"/>
-          </constraints>
         </entryLink>
         <entryLink import="true" name="Transport" hidden="false" id="fb22-346d-9f80-9591" type="selectionEntryGroup" targetId="f59a-7dd6-663f-131b"/>
         <entryLink import="true" name="Crusader Seals" hidden="false" id="0d5e-3215-204c-4d30" type="selectionEntry" targetId="d2ba-67e4-c5b7-2bdd" sortIndex="5">
@@ -821,9 +815,6 @@
               </repeats>
             </modifier>
           </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ac6-f8c5-3cd6-acef" includeChildSelections="false"/>
-          </constraints>
         </entryLink>
         <entryLink import="true" name="Frag Grenades" hidden="false" id="1a4a-f4c1-1df4-c185" type="selectionEntry" targetId="2d20-fb36-3564-0dbe" sortIndex="3">
           <costs>
@@ -831,7 +822,6 @@
           </costs>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8d98-ac80-351a-54eb-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d98-ac80-351a-54eb-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
         <entryLink import="true" name="Melta Bombs" hidden="false" id="f463-42be-9bfc-2802" type="selectionEntry" targetId="a1bb-d7bf-d627-b59f" sortIndex="5">
@@ -868,9 +858,6 @@
               </repeats>
             </modifier>
           </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d6c2-33fb-979d-280f" includeChildSelections="false"/>
-          </constraints>
         </entryLink>
         <entryLink import="true" name="Krak Grenades" hidden="false" id="c1d0-96c5-43ad-5b51" type="selectionEntry" targetId="f95f-36b5-33b7-c0f3" sortIndex="3">
           <costs>
@@ -883,9 +870,6 @@
               </repeats>
             </modifier>
           </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f387-9140-1b88-d8e5" includeChildSelections="false"/>
-          </constraints>
         </entryLink>
         <entryLink import="true" name="Crusader Seals" hidden="false" id="79fb-222e-e2e2-4a21" type="selectionEntry" targetId="d2ba-67e4-c5b7-2bdd" sortIndex="4">
           <modifiers>
@@ -1679,4 +1663,7 @@ In addition, any psychic powers targeted against any Black Templars unit of char
     </rule>
     <rule name="Righteous Zeal" id="d22a-c950-bbf8-fb60" hidden="false"/>
   </rules>
+  <infoLinks>
+    <infoLink name="Mixed Armour" id="483f-aeee-5c3d-b6f4" hidden="false" type="rule" targetId="a3dd-5a9d-6871-ff4e"/>
+  </infoLinks>
 </catalogue>

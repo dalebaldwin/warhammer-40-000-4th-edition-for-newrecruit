@@ -206,17 +206,11 @@
               </repeats>
             </modifier>
           </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bfb2-9d95-f5ff-3d7d" includeChildSelections="false" automatic="false"/>
-          </constraints>
         </entryLink>
         <entryLink import="true" name="Krak Grenades" hidden="false" id="0ae3-c867-009f-b8c9" type="selectionEntry" targetId="f95f-36b5-33b7-c0f3" sortIndex="6">
           <costs>
             <cost name="Points" typeId="4deb-313d-6685-f48b" value="0"/>
           </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cd0d-7e9b-0482-fc41" includeChildSelections="false"/>
-          </constraints>
           <modifiers>
             <modifier type="increment" value="2" field="4deb-313d-6685-f48b">
               <repeats>
@@ -1005,17 +999,11 @@
               </repeats>
             </modifier>
           </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="45be-8696-43a0-b047" includeChildSelections="false" automatic="false"/>
-          </constraints>
         </entryLink>
         <entryLink import="true" name="Krak Grenades" hidden="false" id="6f32-3da2-d15f-9834" type="selectionEntry" targetId="f95f-36b5-33b7-c0f3">
           <costs>
             <cost name="Points" typeId="4deb-313d-6685-f48b" value="0"/>
           </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7166-4e3b-cb93-b950" includeChildSelections="false"/>
-          </constraints>
           <modifiers>
             <modifier type="increment" value="2" field="4deb-313d-6685-f48b">
               <repeats>
@@ -1028,9 +1016,6 @@
           <costs>
             <cost name="Points" typeId="4deb-313d-6685-f48b" value="0"/>
           </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c523-b6aa-434b-45a2" includeChildSelections="false"/>
-          </constraints>
           <modifiers>
             <modifier type="increment" value="5" field="4deb-313d-6685-f48b">
               <repeats>

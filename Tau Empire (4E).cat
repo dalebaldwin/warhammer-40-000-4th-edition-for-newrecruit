@@ -2093,7 +2093,7 @@ Markerlight shots do not benefit from the effects of other markerlights.</charac
             <characteristic name="Range" typeId="52616e676523232344415441232323">Unlimited</characteristic>
             <characteristic name="Strength" typeId="537472656e67746823232344415441232323">8</characteristic>
             <characteristic name="AP" typeId="4.1502323234441545e+23">3</characteristic>
-            <characteristic name="Type" typeId="8b10-045a-f593-605e">Heavy 1</characteristic>
+            <characteristic name="Type" typeId="8b10-045a-f593-605e">Heavy 1, One Shot</characteristic>
             <characteristic name="Info" typeId="33e9-27bd-77e4-401d">Any model equipped with a markerlight may request a seeker missile salvo as detailed in the markerlight rules. Up to two seeker missiles may be fitted to a single vehicle, and one or both launched in a single turn, each using different markerlight hits. Each is a single shot weapon. The missiles do not need a line of sight from the vehicle they are mounted on to the target. The missile is assumed to move in a straight line between the model carrying the missile and the target itself for the purposes of deciding whether the shot strikes the front, side, or rear. The missiles have no maximum range. Ordinarily the vehicles carrying the seeker missiles has no control over them and cannot launch them itself. The mechanism is remote and responds only to markerlight users. The missiles may always be fired, each at different targets if relevant, regardless of the distance the vehicles has moved or whether it has fired any other weapons. They may also be fired if the vehicle has suffered a Crew Stunned vehicle damage result.</characteristic>
           </characteristics>
         </profile>
