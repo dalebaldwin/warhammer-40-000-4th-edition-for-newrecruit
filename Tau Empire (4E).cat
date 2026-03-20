@@ -70,9 +70,6 @@
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="unit" import="true" name="Honour Guard" hidden="false" id="7dfa-0d5c-4a7d-82c4">
-          <categoryLinks>
-            <categoryLink name="Troops" hidden="false" id="68e8-ebac-b5fc-1ca1" targetId="23e2-2a28-50f4-a3c1" primary="true"/>
-          </categoryLinks>
           <entryLinks>
             <entryLink import="true" name="Devilfish Troop Carrier" hidden="false" id="0bdc-2669-3f53-d54e" type="selectionEntry" targetId="b3b0-17af-698b-03ba" sortIndex="4"/>
             <entryLink import="true" name="Photon Grenades" hidden="false" id="92c0-cb07-b5ee-cef8" type="selectionEntry" targetId="ed79-628b-9188-f3d8" sortIndex="2">
