@@ -612,7 +612,8 @@
             <entryLink import="true" name="Wargear" hidden="false" id="324e-8eb0-4ccf-3d7c" type="selectionEntryGroup" targetId="dc6a-6928-1132-646c" sortIndex="5"/>
             <entryLink import="true" name="Support Systems" hidden="false" id="d882-36d7-e9b7-8fd4" type="selectionEntryGroup" targetId="373f-e5d6-64cc-bd2b" sortIndex="4">
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="848f-cf49-eb2a-d541" includeChildSelections="false" automatic="true"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="848f-cf49-eb2a-d541-min" includeChildSelections="false" automatic="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="848f-cf49-eb2a-d541-max" includeChildSelections="false" automatic="false"/>
               </constraints>
             </entryLink>
             <entryLink import="true" name="Drones" hidden="true" id="a766-e6ec-f577-e914" type="selectionEntryGroup" targetId="3d5e-2bb6-9ad8-6d06" sortIndex="6">
