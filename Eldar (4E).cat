@@ -803,48 +803,28 @@
         <categoryLink name="Elites" hidden="false" id="466d-43e8-da16-1b54" targetId="39ab-2bcd-49d1-cfef" primary="true">
           <modifiers>
             <modifier type="set" value="false" field="primary">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="10" field="selections" scope="parent" childId="83af-8999-54fb-a887" shared="true" includeChildSelections="false"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="e369-146d-967c-5070" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="wg01-troops-upgrade" shared="true" includeChildSelections="true"/>
+              </conditions>
             </modifier>
             <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="10" field="selections" scope="parent" childId="83af-8999-54fb-a887" shared="true" includeChildSelections="false"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="e369-146d-967c-5070" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="wg01-troops-upgrade" shared="true" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </categoryLink>
         <categoryLink name="Troops" hidden="true" id="wg01-troops-link" targetId="23e2-2a28-50f4-a3c1" primary="false">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="10" field="selections" scope="parent" childId="83af-8999-54fb-a887" shared="true" includeChildSelections="false"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="e369-146d-967c-5070" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="wg01-troops-upgrade" shared="true" includeChildSelections="true"/>
+              </conditions>
             </modifier>
             <modifier type="set" value="true" field="primary">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="10" field="selections" scope="parent" childId="83af-8999-54fb-a887" shared="true" includeChildSelections="false"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="e369-146d-967c-5070" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="wg01-troops-upgrade" shared="true" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </categoryLink>
@@ -866,6 +846,30 @@
         </entryLink>
       </entryLinks>
       <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Field as Troops" hidden="true" id="wg01-troops-upgrade">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="wg01-troops-upg-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="10" field="selections" scope="parent" childId="83af-8999-54fb-a887" shared="true" includeChildSelections="false"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="e369-146d-967c-5070" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Field as Troops" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="wg01-troops-upg-prof">
+              <characteristics>
+                <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">A unit of 10 Wraithguard led by a Spiritseer may be fielded as a Troops choice instead of Elites.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
         <selectionEntry type="model" import="true" name="Wraithguard" hidden="false" id="83af-8999-54fb-a887">
           <profiles>
             <profile name="Wraithguard" typeId="556e697423232344415441232323" typeName="Unit" hidden="false" id="wg01-prof-7931-bc6b">
@@ -1173,23 +1177,30 @@
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="gjb01-min" includeChildSelections="false"/>
             <constraint type="max" value="12" field="selections" scope="parent" shared="true" id="gjb01-max" includeChildSelections="false"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Shuriken Cannon" hidden="false" id="gjb01-shc-01">
-              <costs>
-                <cost name="Points" typeId="4deb-313d-6685-f48b" value="10"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="gjb01-shc-max" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Shuriken Cannon Upgrade" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="gjb01-shc-prof">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">Every third Guardian Jetbike may replace its twin-linked shuriken catapults with a single shuriken cannon at +10 points per model.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Shuriken Cannon" hidden="false" id="gjb01-shc-01">
+          <costs>
+            <cost name="Points" typeId="4deb-313d-6685-f48b" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="gjb01-shc-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="gjb01-shc-max">
+              <repeats>
+                <repeat value="3" repeats="1" field="selections" scope="parent" childId="gjb01-mod1-ca90-ab90" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Shuriken Cannon Upgrade" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="gjb01-shc-prof">
+              <characteristics>
+                <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">Every third Guardian Jetbike may replace its twin-linked shuriken catapults with a single shuriken cannon at +10 points per model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -1708,6 +1719,35 @@
       </costs>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Fire Prism" hidden="false" id="cdc7-9c9f-7b1e-6ef7">
+      <profiles>
+        <profile name="Fire Prism" typeId="56656869636c6523232344415441232323" typeName="Vehicle" hidden="false" id="fp01-prof-7b1e-6ef7">
+          <characteristics>
+            <characteristic name="Front" typeId="46726f6e7423232344415441232323">12</characteristic>
+            <characteristic name="Side" typeId="5.369646523232344e+27">12</characteristic>
+            <characteristic name="Rear" typeId="5.265617223232345e+27">10</characteristic>
+            <characteristic name="BS" typeId="a6a5-1595-da9e-6155">4</characteristic>
+            <characteristic name="Type" typeId="5.479706523232345e+27">Tank, Fast, Skimmer</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Prism Cannon (Focussed)" typeId="576561706f6e23232344415441232323" typeName="Weapon" hidden="false" id="fp01-pc-focus">
+          <characteristics>
+            <characteristic name="Range" typeId="52616e676523232344415441232323">60&quot;</characteristic>
+            <characteristic name="Strength" typeId="537472656e67746823232344415441232323">9</characteristic>
+            <characteristic name="AP" typeId="4.1502323234441545e+23">2</characteristic>
+            <characteristic name="Type" typeId="8b10-045a-f593-605e">Heavy 1, Blast</characteristic>
+            <characteristic name="Info" typeId="33e9-27bd-77e4-401d"/>
+          </characteristics>
+        </profile>
+        <profile name="Prism Cannon (Dispersed)" typeId="576561706f6e23232344415441232323" typeName="Weapon" hidden="false" id="fp01-pc-disp">
+          <characteristics>
+            <characteristic name="Range" typeId="52616e676523232344415441232323">60&quot;</characteristic>
+            <characteristic name="Strength" typeId="537472656e67746823232344415441232323">5</characteristic>
+            <characteristic name="AP" typeId="4.1502323234441545e+23">4</characteristic>
+            <characteristic name="Type" typeId="8b10-045a-f593-605e">Heavy 1, Large Blast</characteristic>
+            <characteristic name="Info" typeId="33e9-27bd-77e4-401d"/>
+          </characteristics>
+        </profile>
+      </profiles>
       <costs>
         <cost name="Points" typeId="4deb-313d-6685-f48b" value="115"/>
       </costs>
@@ -1715,7 +1755,7 @@
         <categoryLink name="Heavy Support" hidden="false" id="8f85-7a1c-bca6-51cc" targetId="6a52-1951-5b0c-024e" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Hull Weapon" id="3d2b-bf31-bc71-e1e0" hidden="false" defaultSelectionEntryId="af62-97b9-d00a-3152">
+        <selectionEntryGroup name="Hull Weapon" id="3d2b-bf31-bc71-e1e0" hidden="false" defaultSelectionEntryId="82ef-5e09-e861-30c7">
           <entryLinks>
             <entryLink import="true" name="Shuriken Cannon" hidden="false" id="03cf-7b28-d3e5-8f4b" type="selectionEntry" targetId="8c91-f646-f1fd-b315" sortIndex="2">
               <costs>
@@ -1734,6 +1774,42 @@
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2957-8632-d434-acc7-min" includeChildSelections="false" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2957-8632-d434-acc7-max" includeChildSelections="false" automatic="true"/>
           </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Vehicle Upgrades" id="fp01-upgr-grp" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Vectored Engines" hidden="false" id="fp01-ve">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="20"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fp01-ve-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Star Engines" hidden="false" id="fp01-se">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fp01-se-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Holo-fields" hidden="false" id="fp01-hf">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="35"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fp01-hf-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Spirit Stones" hidden="false" id="fp01-ss">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="10"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fp01-ss-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
