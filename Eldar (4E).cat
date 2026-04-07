@@ -924,6 +924,18 @@
                 <cost name="Points" typeId="4deb-313d-6685-f48b" value="25"/>
               </costs>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Wraithsword" hidden="false" id="wl01-hw2-ws">
+              <costs>
+                <cost name="Points" typeId="4deb-313d-6685-f48b" value="10"/>
+              </costs>
+              <profiles>
+                <profile name="Wraithsword" typeId="b729-49a4-4123-cf00" typeName="Melee Weapon" hidden="false" id="wl01-hw2-ws-prof">
+                  <characteristics>
+                    <characteristic name="Details" typeId="acf3-d214-6e51-29fe">A wraithsword gives the Wraithlord +1 Attack. Replaces one heavy weapon.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
