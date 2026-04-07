@@ -807,10 +807,14 @@
       <categoryLinks>
         <categoryLink name="Troops" hidden="false" id="wg01-troops-catlink" targetId="23e2-2a28-50f4-a3c1" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="10" field="wg01-min"/>
+        <modifier type="set" value="1" field="wg01-wl-min"/>
+      </modifiers>
       <profiles>
         <profile name="Wraithguard (Troops)" typeId="57617267656172204974656d23232344415441232323" typeName="Wargear" hidden="false" id="wg01-troops-info">
           <characteristics>
-            <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">A unit of 10 Wraithguard led by a Warlock with Spiritseer upgrade may be fielded as a Troops choice instead of Elites. The Warlock must be given the Spiritseer upgrade.</characteristic>
+            <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">Must be a unit of 10 Wraithguard led by a Warlock with Spiritseer upgrade.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3356,6 +3360,7 @@
         <entryLink import="true" name="Transport" hidden="false" id="8fa6-1e1e-1fb2-e1d5" type="selectionEntryGroup" targetId="0825-f8ff-182e-4e81"/>
         <entryLink import="true" name="Warlock" hidden="false" id="wg01-wl-link" type="selectionEntry" targetId="e327-30c2-1b34-86e0">
           <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="wg01-wl-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="wg01-wl-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
